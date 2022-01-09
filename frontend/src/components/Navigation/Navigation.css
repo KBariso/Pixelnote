@@ -1,0 +1,13 @@
+.home {
+    width: 70%;
+}
+
+li {
+    background-color: red;
+    display: flex;
+    padding-top: 10px;
+}
+
+.signup {
+    padding-left: 20px;
+}

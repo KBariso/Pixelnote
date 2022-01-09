@@ -6,16 +6,16 @@ function LoginFormModal() {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <>
+    <div>
       <button onClick={() => setShowModal(true)}>
-        Log In <i className="fas fa-sign-in-alt"></i>
+        Log In
       </button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
           <LoginForm />
         </Modal>
       )}
-    </>
+    </div>
   );
 }
 

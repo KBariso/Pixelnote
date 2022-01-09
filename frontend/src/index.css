@@ -1,1 +1,8 @@
 /* TODO Add site wide styles */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+html {
+    display: flexbox;
+    background-color: #f3cb4e;
+    font-family: 'Press Start 2P', cursive;
+}

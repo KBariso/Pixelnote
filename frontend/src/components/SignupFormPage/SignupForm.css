@@ -1,0 +1,10 @@
+form {
+    display: flex;
+    height: 300px;
+    background-color: aqua;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* justify-items: center; */
+
+}

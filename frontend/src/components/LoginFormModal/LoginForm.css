@@ -1,0 +1,6 @@
+.login {
+    background-color: purple;
+    display: flex;
+    width: 100px;
+    align-self: flex-start;
+}
