@@ -1,5 +1,7 @@
-.home {
-    width: 70%;
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 li {
@@ -8,6 +10,11 @@ li {
     padding-top: 10px;
 }
 
-.signup {
-    padding-left: 20px;
+.right-nav {
+    display: flex;
+}
+
+.signup2 {
+    padding-right: 10px;
+    text-decoration: none;
 }
