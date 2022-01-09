@@ -1,7 +1,7 @@
 form {
     display: flex;
     height: 300px;
-    background-color: aqua;
+    background-color: #75c8ae;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
