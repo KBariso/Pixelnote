@@ -1,0 +1,20 @@
+.signup {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #e5771e;
+    padding: 10px;
+    color: black;
+}
+
+.signup:hover {
+    background-color: #f38831;
+}
+
+.middle-nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+
+}

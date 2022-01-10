@@ -1,6 +1,15 @@
 .login {
-    background-color: purple;
+    background-color: royalblue;
     display: flex;
     width: 100px;
     align-self: flex-start;
+}
+
+.button {
+    background: none;
+    color: black;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    padding-top: 20px;
 }
