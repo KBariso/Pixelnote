@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./splash.css";
 import logo1 from "./Images/updatedPixelnoteGif.gif";
 import logo2 from "./Images/Inkedpacman_LI.jpg";
-import logo3 from "./Images/SplashBackground.jpg"
+// import logo3 from "./Images/SplashBackground.jpg"
 
 const Splash = () => {
   return (

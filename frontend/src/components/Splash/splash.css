@@ -7,7 +7,6 @@
 }
 
 
-
 .pacman {
     padding-top: 20px;
     height: 80px;
@@ -16,7 +15,7 @@
 
 .press-start {
     display: flex;
-    padding-top: 50px;
+    padding-top: 100px;
     justify-content: center;
 }
 
