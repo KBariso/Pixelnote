@@ -1,41 +1,45 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 // import { NavLink } from "react-router-dom";
-import { getAllNotebooks } from "../../store/notebooks";
-import Notebook from "../Notebook";
-import "./notebooks.css";
+import { getAllNotes } from "../../store/notes";
+import Note from "../OneNote";
+import "./AllNotes.css";
 
-const Notebooks = () => {
+const Notes = () => {
   const dispatch = useDispatch();
 
   //create useEffect, call our thunk
   useEffect(() => {
-    dispatch(getAllNotebooks());
+    dispatch(getAllNotes());
   }, [dispatch]);
 
   //useSelector, pull the slice of state
   //whatever we pass into our rootReducer, is what we key in our useSelector
-  const notebooksObj = useSelector((state) => state.notebooks);
-  const notebooks = Object.values(notebooksObj);
+  const notesObj = useSelector((state) => state.notes);
+  const notes = Object.values(notesObj);
   // console.log(notebooksObj)
 
   //any data manip, from our state. If an array - map and render, so you can have a subcomponent
 
   return (
     <div>
-      {notebooks.map(
+      {notes.map(
         ({
           id,
           userId,
+          notebookId,
           title,
+          content,
           createdAt,
           updatedAt
         }) => {
           return (
-            <Notebook
+            <Note
             key={id}
               userId={userId}
+              notebookId={notebookId}
               title={title}
+              content={content}
               createdAt={createdAt}
               updatedAt={updatedAt}
             />
@@ -46,4 +50,4 @@ const Notebooks = () => {
   );
 };
 
-export default Notebooks;
+export default Notes;
