@@ -19,4 +19,12 @@ li {
     text-decoration: none;
     color: black;
     padding-top: 20px;
+    padding-left: 13px;
+    border: 1px solid;
+}
+
+.signup2:hover{
+    color:black;
+    background-color: white;
+
 }
