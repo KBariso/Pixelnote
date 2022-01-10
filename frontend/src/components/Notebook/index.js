@@ -1,9 +1,9 @@
 import React from "react";
 
-const Notebook = ({ key: id, userId, title, createdAt, updatedAt }) => {
+const Notebook = ({id, userId, title, createdAt, updatedAt }) => {
   return (
     <div>
-      <h1>{title}</h1>
+      <p>{title}</p>
     </div>
   );
 };
