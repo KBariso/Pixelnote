@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import ProfileButton from "./ProfileButton";
 import LoginFormModal from "../LoginFormModal";
 import logo from './Images/PixelnoteLogo.png';
+import DemoUser from "../DemoUser";
 import "./Navigation.css";
 
 function Navigation({ isLoaded }) {
@@ -15,8 +16,8 @@ function Navigation({ isLoaded }) {
   } else {
     sessionLinks = (
       <>
-
       <div className="right-nav">
+        <DemoUser />
         <NavLink className="signup2" to="/signup">
           Sign Up
         </NavLink>
