@@ -8,22 +8,22 @@ import "./AllNotes.css";
 const Notes = () => {
   const dispatch = useDispatch();
 
-  //create useEffect, call our thunk
   useEffect(() => {
     dispatch(getAllNotes());
   }, [dispatch]);
 
-  //useSelector, pull the slice of state
-  //whatever we pass into our rootReducer, is what we key in our useSelector
+  const user = useSelector((state) => state.session?.user?.id)
   const notesObj = useSelector((state) => state.notes);
   const notes = Object.values(notesObj);
-  // console.log(notebooksObj)
+//   console.log(user)
+    const userNotes = notes.filter(note => note.userId === user)
+//   console.log(notes[5].userId)
 
-  //any data manip, from our state. If an array - map and render, so you can have a subcomponent
+
 
   return (
     <div>
-      {notes.map(
+      {userNotes.map(
         ({
           id,
           userId,
