@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ProfileButton from "./ProfileButton";
 import LoginFormModal from "../LoginFormModal";
+import logo from './Images/PixelnoteLogo.png';
 import "./Navigation.css";
 
 function Navigation({ isLoaded }) {
@@ -29,7 +30,9 @@ function Navigation({ isLoaded }) {
   return (
     <div className="navbar">
       <NavLink exact to="/home">
-        <div className="home">Pixelnote</div>
+        <div className="home">
+        <img className="pixelnoteLogo" src={logo}/>
+        </div>
       </NavLink>
       {isLoaded && sessionLinks}
     </div>

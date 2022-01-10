@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 html {
-    display: flexbox;
+    /* display: flexbox; */
     background-color: #ffecb4;
     font-family: 'Press Start 2P', cursive;
 }

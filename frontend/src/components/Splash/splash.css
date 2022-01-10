@@ -1,1 +1,43 @@
+.splash-page {
+    display: flex;
+    padding-top: 50px;
+    /* background-color: #3B6061; */
+    justify-content: center;
 
+}
+
+
+
+.pacman {
+    padding-top: 20px;
+    height: 80px;
+    width: 100%;
+}
+
+.press-start {
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+}
+
+.start-button {
+    border:black solid;
+    background-color: black;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.start-button:hover {
+    color: black;
+    background-color: white;
+}
+
+.splash-background {
+    background-image: url('./Images/SplashBackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 1150px;
+
+}

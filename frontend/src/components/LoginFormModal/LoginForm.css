@@ -6,7 +6,10 @@
 }
 
 .button {
-    display: flex;
-    background-color: #75c8ae;
+    background: none;
+    color: black;
+    border: none;
     font: inherit;
+    cursor: pointer;
+    padding-top: 20px;
 }
