@@ -4,11 +4,11 @@
     justify-content: space-around;
 }
 
-li {
+/* li {
     background-color: #e5771e;
     display: flex;
     padding-top: 10px;
-}
+} */
 
 .right-nav {
     display: flex;
