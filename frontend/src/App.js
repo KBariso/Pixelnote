@@ -7,7 +7,7 @@ import Navigation from "./components/Navigation";
 import Splash from "./components/Splash";
 import Home from "./components/Home";
 import Notebooks from "./components/Notebooks";
-import Notes from "./components/AllNotes";
+import Notes from "./components/AllNotesList";
 
 function App() {
   const dispatch = useDispatch();

@@ -5,6 +5,8 @@ const { Note } = require("../../db/models");
 
 const router = express.Router();
 
+
+//Get all notes
 router.get(
   "/",
   requireAuth,
@@ -14,5 +16,20 @@ router.get(
   })
 );
 
+//Get one note
+router.get('/:id(\\d+)', asyncHandler(async function(req, res) {
+  const note = await Note.findByPk(req.params.id)
+  console.log(note)
+  return res.json(note)
+}))
+
+
+
+// router.post("/", asyncHandler(async function (req, res) {
+//   const {userId, notebookId, title, content} = req.body;
+//   const newNote = await Note.create({userId, notebookId, title, content})
+//   return res.json(newNote)
+// })
+// )
 
 module.exports = router;

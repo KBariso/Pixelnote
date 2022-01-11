@@ -1,6 +1,7 @@
 import { csrfFetch } from "./csrf";
 
 const GET_ALL_NOTES = "notes/GET_ALL_NOTES";
+const GET_ONE_NOTE = "notes/GET_ONE_NOTE"
 
 const loadAllNotes = (notes) => ({
   type: GET_ALL_NOTES,
@@ -17,6 +18,23 @@ export const getAllNotes = () => async (dispatch) => {
   }
 };
 
+
+const loadOneNote = (note) => ({
+  type: GET_ONE_NOTE,
+  note,
+});
+
+export const getOneNote = (id) => async (dispatch) => {
+  const res = await csrfFetch(`api/notes/${id}`);
+  if (res.ok) {
+    const note = await res.json();
+    dispatch(loadOneNote(note));
+    return note;
+  }
+}
+
+
+
 const initialState = {};
 const notesReducer = (state = initialState, action) => {
   let newState = {};
@@ -25,6 +43,9 @@ const notesReducer = (state = initialState, action) => {
       action.notes.forEach((note) => {
         newState[note.id] = note;
       });
+      return { ...state, ...newState };
+    case GET_ONE_NOTE:
+      newState[action.note.id] = action.note;
       return { ...state, ...newState };
     default:
       return state;
