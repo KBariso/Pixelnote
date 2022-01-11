@@ -16,5 +16,92 @@
     flex-direction: column;
     text-align: center;
     justify-content: space-around;
+}
 
+.books {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+    background-color: #e5771e;
+}
+
+.pixButton1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pixelnote1{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.pixelnote2{
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.pixButton2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pixelnote3{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.pixButton3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pixelnote4{
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.pixButton4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.firstDescription {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    align-items: center;
+}
+
+.secondDescription {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    align-items: center;
+}
+
+p {
+  display: flex;
+  height: 20%;
+  width: 45%;
+  line-height: 30px;
+  background-color: #75c8ae;
+  color: black;
+  padding:15px;
+}
+
+.listBenefits {
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+    width: 45%;
+    line-height: 40px;
+    background-color: #75c8ae;
+    color: black;
+    padding:15px;
+    list-style-type: none;
 }
