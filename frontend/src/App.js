@@ -7,7 +7,9 @@ import Navigation from "./components/Navigation";
 import Splash from "./components/Splash";
 import Home from "./components/Home";
 import Notebooks from "./components/Notebooks";
-import Notes from "./components/AllNotes";
+import NotesList from "./components/AllNotesList";
+import Note from "./components/OneNote";
+import CreateNewNote from "./components/CreateNewNote";
 
 function App() {
   const dispatch = useDispatch();
@@ -27,13 +29,19 @@ function App() {
           <Route path="/home" exact>
             <Home />
           </Route>
+          <Route path="/notes/new">
+            <CreateNewNote />
+          </Route>
           <Route path="/signup">
             <SignupFormPage />
           </Route>
-          <Route path="/user/notes">
-            <Notes />
+          <Route path="/notes">
+            <NotesList />
+            <Route path="/notes/:id">
+              <Note />
+            </Route>
           </Route>
-          <Route path="/user/notebooks">
+          <Route path="/notebooks">
             <Notebooks />
           </Route>
         </Switch>

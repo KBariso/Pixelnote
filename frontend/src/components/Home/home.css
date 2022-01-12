@@ -18,11 +18,27 @@
     justify-content: space-around;
 }
 
+.middle-navU {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    background-color: #75c8ae;
+}
+
 .books {
     display: flex;
     justify-content: space-evenly;
     padding-top: 10px;
     background-color: #e5771e;
+}
+
+.booksU {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 10px;
+    /* background-color: #75c8ae; */
 }
 
 .pixButton1 {
@@ -32,6 +48,18 @@
 }
 
 .pixelnote1{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.pixButtonU1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: black;
+}
+
+.pixelnoteU1{
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -47,6 +75,18 @@
     align-items: center;
 }
 
+.pixelnoteU2{
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.pixButtonU2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
 .pixelnote3{
     padding-top: 15px;
     padding-bottom: 15px;
@@ -58,6 +98,17 @@
     align-items: center;
 }
 
+.pixelnoteU3{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.pixButtonU3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .pixelnote4{
     padding-top: 20px;
     padding-bottom: 15px;
@@ -67,6 +118,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.pixelnoteU4{
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.pixButtonU4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: black;
 }
 
 

@@ -5,6 +5,7 @@ import ProfileButton from "./ProfileButton";
 import LoginFormModal from "../LoginFormModal";
 import logo from './Images/PixelnoteLogo.png';
 import DemoUser from "../DemoUser";
+
 import "./Navigation.css";
 
 function Navigation({ isLoaded }) {
@@ -17,12 +18,13 @@ function Navigation({ isLoaded }) {
     sessionLinks = (
       <>
       <div className="right-nav">
+
+      </div>
         <DemoUser />
         <NavLink className="signup2" to="/signup">
           Sign Up
         </NavLink>
         <LoginFormModal />
-      </div>
 
       </>
     );

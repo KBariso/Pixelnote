@@ -7,7 +7,6 @@ module.exports = (sequelize, DataTypes) => {
     },
     notebookId: {
       type: DataTypes.INTEGER,
-      allowNull: false
     },
     title: {
       type: DataTypes.STRING(100),

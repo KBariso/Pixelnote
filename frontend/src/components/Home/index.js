@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import logo1 from "./Images/BookClosedClear.png";
 import logo2 from "./Images/Bookopening1.png";
 import logo3 from "./Images/BookOpening2.png";
@@ -8,6 +9,8 @@ import logo4 from "./Images/BookOpening3.png";
 import "./home.css";
 
 const Home = () => {
+  const sessionUser = useSelector((state) => state.session.user);
+
   const [showFirstImg, setShowFirstImg] = useState(false);
   const [showSecondImg, setShowSecondImg] = useState(false);
   const [showThirdImg, setShowThirdImg] = useState(false);
@@ -89,8 +92,39 @@ const Home = () => {
     return () => document.removeEventListener("click", closeFourthImg);
   }, [showFourthImg]);
 
-  return (
-    <>
+
+
+
+  let sessionHome;
+  if (sessionUser) {
+    sessionHome = (
+      <>
+      <div className="middle-navU">
+        <div className="booksU">
+          <NavLink exact to="/notebooks" className="pixButtonU1">
+            <img className="pixelnoteU1" src={logo1} />
+            Notebooks
+          </NavLink>
+{/*
+          <button className="pixButtonU2">
+            <img className="pixelnoteU2" src={logo2} />
+            Features
+          </button>
+          <button className="pixButtonU3">
+            <img className="pixelnoteU3" src={logo3} />
+            Benefits
+          </button> */}
+          <NavLink exact to="/notes" className="pixButtonU4">
+            <img className="pixelnoteU4" src={logo4} />
+            All Notes
+          </NavLink>
+        </div>
+    </div>
+      </>
+    )
+  } else {
+    sessionHome = (
+      <>
       <div className="middle-nav">
         <div className="books">
           <button className="pixButton1">
@@ -141,6 +175,15 @@ const Home = () => {
           Sign Up For Free!
         </NavLink> */}
       </div>
+    </>
+
+    )
+  }
+
+
+  return (
+    <>
+    {sessionHome}
     </>
   );
 };
