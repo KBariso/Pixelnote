@@ -29,8 +29,8 @@ router.post(
   "/",
   requireAuth,
   asyncHandler(async function (req, res) {
-    const { userId, notebookId, title, content, createdAt, updatedAt } = req.body;
-    const newNote = await Note.create({ userId, notebookId, title, content, createdAt, updatedAt });
+    const { userId, title, content, createdAt, updatedAt } = req.body;
+    const newNote = await Note.create({ userId, title, content, createdAt, updatedAt });
     return res.json(newNote);
   })
 );

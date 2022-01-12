@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect, useHistory } from "react-router-dom";
 import { createNewNote } from "../../store/notes";
+import { NavLink } from "react-router-dom";
 import './createNewNote.css';
 
 const CreateNewNote = () => {
@@ -10,7 +11,7 @@ const CreateNewNote = () => {
     const user = useSelector((state) => state.session.user?.id)
     // console.log(user)
     const userId = user;
-    console.log(userId)
+    // console.log(userId)
 
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
@@ -33,14 +34,16 @@ const CreateNewNote = () => {
         setErrors(errors)
     },[title, content])
 
+    if (!user) return <Redirect to="/login" />;
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (errors.length > 0) return;
 
         const payload = {
-          title,
-          content,
-          userId
+            userId,
+            title,
+            content
         };
 
         let createdNote = await dispatch(createNewNote(payload));
@@ -49,9 +52,6 @@ const CreateNewNote = () => {
         }
       };
 
-      const handleCancelClick = (e) => {
-        return <Redirect to="/notes" />;
-      };
 
  return (
      <div>
@@ -75,7 +75,7 @@ const CreateNewNote = () => {
                onChange={updateContent}
            />
            <button type="submit">Create new Note</button>
-           <button type="button" onClick={handleCancelClick}>Cancel</button>
+           <NavLink to="/notes">Cancel</NavLink>
         </form>
 
      </div>

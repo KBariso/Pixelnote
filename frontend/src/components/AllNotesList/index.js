@@ -16,31 +16,30 @@ const NotesList = () => {
   const user = useSelector((state) => state.session?.user?.id);
   const notesObj = useSelector((state) => state.notes);
   const notes = Object.values(notesObj);
-    // console.log(user)
+  // console.log(user)
   const userNotes = notes.filter((note) => note.userId === user);
-
-
 
   return (
     <div>
-        <div>
-          {userNotes.map(
-            ( note ) => {
-              console.log(note.id)
-              return (
-                  <NoteListDetail
-                    id={note.id}
-                    userId={note.userId}
-                    notebookId={note.notebookId}
-                    title={note.title}
-                    content={note.content}
-                    createdAt={note.createdAt}
-                    updatedAt={note.updatedAt}
-                    />
-              );
-            }
-          )}
-        </div>
+      <div>
+        {userNotes.map((note) => {
+          console.log(note.id);
+          return (
+            <NoteListDetail
+              id={note.id}
+              userId={note.userId}
+              notebookId={note.notebookId}
+              title={note.title}
+              content={note.content}
+              createdAt={note.createdAt}
+              updatedAt={note.updatedAt}
+            />
+          );
+        })}
+      </div>
+      <div>
+        <NavLink to="/notes/new">New Note</NavLink>
+      </div>
     </div>
   );
 };

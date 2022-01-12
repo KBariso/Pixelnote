@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getOneNote } from "../../store/notes";
+import { NavLink } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 import './OneNote.css'
 
@@ -22,12 +24,18 @@ const Note = ({noteId}) =>  {
       // console.log("IM HERE")
     }, [dispatch, id]);
 
+    const user = useSelector((state) => state.session.user?.id)
+    if (!user) return <Redirect to="/login" />;
     // console.log(noteId)
     // console.log(oneNote)
 
       return (
         <div>
       <p>{oneNote?.content}</p>
+        <div>
+        </div>
+
+
         </div>
       );
 

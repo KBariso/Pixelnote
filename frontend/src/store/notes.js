@@ -54,6 +54,8 @@ export const createNewNote = (note) => async (dispatch) => {
 }
 
 
+
+
 const initialState = {};
 const notesReducer = (state = initialState, action) => {
   let newState = {};
