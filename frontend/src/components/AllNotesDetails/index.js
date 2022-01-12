@@ -13,9 +13,10 @@ const NoteListDetail = ({ id, userId, notebookId, title, content, createdAt, upd
         <h3 onClick={()=>setSelectedNote(id)}>{title}</h3>
       </NavLink>
       {/* <p>{content}</p> */}
-      {selectedNote &&
+      {/* {selectedNote &&
         <Note noteId={selectedNote} clickHandler={()=>{setSelectedNote(null)}}/>
-      }
+      } */}
+      {/* <h1>{oneNote?.content}</h1> */}
     </div>
   );
 };

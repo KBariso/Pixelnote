@@ -27,7 +27,7 @@ const Note = ({noteId}) =>  {
 
       return (
         <div>
-         <h1>{oneNote.content}</h1>
+      <p>{oneNote?.content}</p>
         </div>
       );
 
