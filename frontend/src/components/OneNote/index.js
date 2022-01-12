@@ -18,8 +18,8 @@ const Note = ({noteId}) =>  {
 
     useEffect(() => {
       dispatch(getOneNote(id));
-      console.log(typeof noteId)
-      console.log("IM HERE")
+      // console.log(typeof noteId)
+      // console.log("IM HERE")
     }, [dispatch, id]);
 
     // console.log(noteId)

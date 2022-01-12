@@ -9,6 +9,7 @@ import Home from "./components/Home";
 import Notebooks from "./components/Notebooks";
 import NotesList from "./components/AllNotesList";
 import Note from "./components/OneNote";
+import CreateNewNote from "./components/CreateNewNote";
 
 function App() {
   const dispatch = useDispatch();
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route path="/home" exact>
             <Home />
+          </Route>
+          <Route path="/notes/new">
+            <CreateNewNote />
           </Route>
           <Route path="/signup">
             <SignupFormPage />

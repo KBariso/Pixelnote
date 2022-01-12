@@ -26,7 +26,7 @@ const loadOneNote = (note) => ({
 });
 
 export const getOneNote = (id) => async (dispatch) => {
-  console.log(id)
+  // console.log(id)
   const res = await csrfFetch(`/api/notes/${id}`);
   if (res.ok) {
     const note = await res.json();
@@ -35,15 +35,23 @@ export const getOneNote = (id) => async (dispatch) => {
   }
 }
 
-// const createOneNote = (note) => ({
-//   type: ADD_ONE_NOTE,
-//   note,
-// })
+const createOneNote = (note) => ({
+  type: ADD_ONE_NOTE,
+  note,
+})
 
-// export const addOneNote = ()
-
-
-
+export const createNewNote = (note) => async (dispatch) => {
+  const res = await csrfFetch(`/api/notes`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(note),
+  });
+  if (res.ok) {
+    const note = await res.json();
+    dispatch(createOneNote(note));
+    return note;
+  }
+}
 
 
 const initialState = {};
@@ -58,6 +66,8 @@ const notesReducer = (state = initialState, action) => {
     case GET_ONE_NOTE:
       newState[action.note.id] = action.note;
       return { ...state, ...newState };
+    case ADD_ONE_NOTE:
+      return {...state, [action.note.id]: action.note }
     default:
       return state;
   }

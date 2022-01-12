@@ -24,15 +24,16 @@ router.get(
   })
 );
 
-// // create new note
-// router.post(
-//   "/new",
-//   asyncHandler(async function (req, res) {
-//     const { userId, notebookId, title, content } = req.body;
-//     const newNote = await Note.create({ userId, notebookId, title, content });
-//     return res.json(newNote);
-//   })
-// );
+// create new note
+router.post(
+  "/",
+  requireAuth,
+  asyncHandler(async function (req, res) {
+    const { userId, notebookId, title, content, createdAt, updatedAt } = req.body;
+    const newNote = await Note.create({ userId, notebookId, title, content, createdAt, updatedAt });
+    return res.json(newNote);
+  })
+);
 
 // //update a note
 // router.put(
