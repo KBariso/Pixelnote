@@ -31,18 +31,17 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
-          <Route path="/notes" >
+          <Route path="/notes">
             <NotesList />
-          </Route>
-          <Route path="/notes/:id" exact>
-            <Note />
+            <Route path="/notes/:id">
+              <Note />
+            </Route>
           </Route>
           <Route path="/notebooks">
             <Notebooks />
           </Route>
         </Switch>
       )}
-
     </>
   );
 }

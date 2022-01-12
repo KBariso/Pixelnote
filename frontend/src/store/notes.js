@@ -1,7 +1,8 @@
 import { csrfFetch } from "./csrf";
 
 const GET_ALL_NOTES = "notes/GET_ALL_NOTES";
-const GET_ONE_NOTE = "notes/GET_ONE_NOTE"
+const GET_ONE_NOTE = "notes/GET_ONE_NOTE";
+const ADD_ONE_NOTE = "notes/ADD_ONE_NOTE";
 
 const loadAllNotes = (notes) => ({
   type: GET_ALL_NOTES,
@@ -26,13 +27,22 @@ const loadOneNote = (note) => ({
 
 export const getOneNote = (id) => async (dispatch) => {
   console.log(id)
-  const res = await csrfFetch(`api/notes/${id}`);
+  const res = await csrfFetch(`/api/notes/${id}`);
   if (res.ok) {
     const note = await res.json();
     dispatch(loadOneNote(note));
     return note;
   }
 }
+
+// const createOneNote = (note) => ({
+//   type: ADD_ONE_NOTE,
+//   note,
+// })
+
+// export const addOneNote = ()
+
+
 
 
 
