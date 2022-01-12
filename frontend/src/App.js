@@ -31,13 +31,13 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
-          <Route path="/user/notes">
+          <Route path="/notes" >
             <NotesList />
           </Route>
-          <Route path="/user/notes/:noteId" exact>
+          <Route path="/notes/:id" exact>
             <Note />
           </Route>
-          <Route path="/user/notebooks">
+          <Route path="/notebooks">
             <Notebooks />
           </Route>
         </Switch>

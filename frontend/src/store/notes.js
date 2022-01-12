@@ -24,8 +24,9 @@ const loadOneNote = (note) => ({
   note,
 });
 
-export const getOneNote = (noteId) => async (dispatch) => {
-  const res = await csrfFetch(`api/notes/${noteId}`);
+export const getOneNote = (id) => async (dispatch) => {
+  console.log(id)
+  const res = await csrfFetch(`api/notes/${id}`);
   if (res.ok) {
     const note = await res.json();
     dispatch(loadOneNote(note));

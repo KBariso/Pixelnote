@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { getAllNotes } from "../../store/notes";
 import NoteListDetail from "../AllNotesDetails";
-import Note from "../OneNote";
+// import Note from "../OneNote";
 import "./AllNotes.css";
 
 const NotesList = () => {
@@ -23,7 +23,6 @@ const NotesList = () => {
 
   return (
     <div>
-
         <div>
           {userNotes.map(
             ( note ) => {
@@ -42,8 +41,6 @@ const NotesList = () => {
             }
           )}
         </div>
-
-
     </div>
   );
 };
