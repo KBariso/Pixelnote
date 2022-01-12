@@ -1,11 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { getAllNotes } from "../../store/notes";
-import Note from "../AllNotes";
+import NoteListDetail from "../AllNotesDetails";
+import Note from "../OneNote";
 import "./AllNotes.css";
 
-const Notes = () => {
+const NotesList = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -15,29 +16,36 @@ const Notes = () => {
   const user = useSelector((state) => state.session?.user?.id);
   const notesObj = useSelector((state) => state.notes);
   const notes = Object.values(notesObj);
-  //   console.log(user)
+    // console.log(user)
   const userNotes = notes.filter((note) => note.userId === user);
-  //   console.log(notes[5].userId)
+
+
 
   return (
     <div>
-      {userNotes.map(
-        ({ id, userId, notebookId, title, content, createdAt, updatedAt }) => {
-          return (
-            <Note
-              key={id}
-              userId={userId}
-              notebookId={notebookId}
-              title={title}
-              content={content}
-              createdAt={createdAt}
-              updatedAt={updatedAt}
-            />
-          );
-        }
-      )}
+
+        <div>
+          {userNotes.map(
+            ( note ) => {
+              console.log(note.id)
+              return (
+                  <NoteListDetail
+                    id={note.id}
+                    userId={note.userId}
+                    notebookId={note.notebookId}
+                    title={note.title}
+                    content={note.content}
+                    createdAt={note.createdAt}
+                    updatedAt={note.updatedAt}
+                    />
+              );
+            }
+          )}
+        </div>
+
+
     </div>
   );
 };
 
-export default Notes;
+export default NotesList;

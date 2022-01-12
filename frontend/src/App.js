@@ -7,7 +7,8 @@ import Navigation from "./components/Navigation";
 import Splash from "./components/Splash";
 import Home from "./components/Home";
 import Notebooks from "./components/Notebooks";
-import Notes from "./components/AllNotesList";
+import NotesList from "./components/AllNotesList";
+import Note from "./components/OneNote";
 
 function App() {
   const dispatch = useDispatch();
@@ -31,13 +32,17 @@ function App() {
             <SignupFormPage />
           </Route>
           <Route path="/user/notes">
-            <Notes />
+            <NotesList />
+          </Route>
+          <Route path="/user/notes/:noteId" exact>
+            <Note />
           </Route>
           <Route path="/user/notebooks">
             <Notebooks />
           </Route>
         </Switch>
       )}
+
     </>
   );
 }

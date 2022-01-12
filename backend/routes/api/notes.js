@@ -19,7 +19,6 @@ router.get(
 //Get one note
 router.get('/:id(\\d+)', asyncHandler(async function(req, res) {
   const note = await Note.findByPk(req.params.id)
-  console.log(note)
   return res.json(note)
 }))
 
