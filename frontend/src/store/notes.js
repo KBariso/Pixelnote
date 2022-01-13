@@ -3,6 +3,7 @@ import { csrfFetch } from "./csrf";
 const GET_ALL_NOTES = "notes/GET_ALL_NOTES";
 const GET_ONE_NOTE = "notes/GET_ONE_NOTE";
 const ADD_ONE_NOTE = "notes/ADD_ONE_NOTE";
+const EDIT_ONE_NOTE = "notes/EDIT_ONE_NOTE"
 
 const loadAllNotes = (notes) => ({
   type: GET_ALL_NOTES,
@@ -54,6 +55,26 @@ export const createNewNote = (note) => async (dispatch) => {
 }
 
 
+const updateNote = (note) => ({
+  type: EDIT_ONE_NOTE,
+  note,
+})
+
+export const editNote = ({noteId, title, content, createdAt, updatedAt}) => async (dispatch) => {
+  // console.log(id)
+  const res = await csrfFetch(`/api/notes/${noteId}/edit`, {
+  method: "PUT",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({noteId, title, content, createdAt, updatedAt})
+  });
+  if (res.ok) {
+    const updatedNote = await res.json();
+    dispatch(updateNote(updatedNote));
+  }
+}
+
+
+
 
 
 const initialState = {};
@@ -69,7 +90,9 @@ const notesReducer = (state = initialState, action) => {
       newState[action.note.id] = action.note;
       return { ...state, ...newState };
     case ADD_ONE_NOTE:
-      return {...state, [action.note.id]: action.note }
+      return {...state, [action.note.id]: action.note}
+    case EDIT_ONE_NOTE:
+      return {...state, [action.note.id]: action.note}
     default:
       return state;
   }

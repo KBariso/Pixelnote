@@ -30,20 +30,26 @@ router.post(
   requireAuth,
   asyncHandler(async function (req, res) {
     const { userId, title, content, createdAt, updatedAt } = req.body;
-    const newNote = await Note.create({ userId, title, content, createdAt, updatedAt });
+    const newNote = await Note.create({ userId, title, content, createdAt, createdAt, updatedAt });
     return res.json(newNote);
   })
 );
 
-// //update a note
-// router.put(
-//   "/:id(\\d+)/edit",
-//   asyncHandler(async function (req, res) {
-//     const { userId, notebookId, title, content } = req.body;
-//     const updateNote = await Note.update({ userId, notebookId, title, content });
-//     return res.json(updateNote);
-//   })
-// )
+//update a note
+router.put(
+  "/:id(\\d+)/edit",
+  requireAuth,
+  asyncHandler(async function (req, res) {
+    const id = parseInt(req.params.id)
+    const { noteId, title, content, updatedAt } = req.body;
+
+    const note = await Note.findByPk(id);
+    const updateNote = await note.update({ noteId, title, content, updatedAt });
+    return res.json(updateNote);
+
+  })
+)
+
 
 
 // //Delete one note
