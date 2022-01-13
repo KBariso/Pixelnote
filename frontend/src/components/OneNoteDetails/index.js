@@ -3,9 +3,6 @@ import React from "react";
 // import { useSelector } from "react-redux";
 
 const NoteDetails = ({id, userId, title, content}) => {
-
-
-
   return (
     <div>
         {/* <h3>{userId}</h3> */}

@@ -23,7 +23,7 @@ const NotesList = () => {
     <div>
       <div>
         {userNotes.map((note) => {
-          console.log(note.id);
+          // console.log(note.id);
           return (
             <NoteListDetail
               id={note.id}

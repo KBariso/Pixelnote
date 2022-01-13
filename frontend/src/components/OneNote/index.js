@@ -8,7 +8,7 @@ import { Redirect } from "react-router-dom";
 import './OneNote.css'
 
 
-const Note = ({noteId}) =>  {
+const Note = () =>  {
     const dispatch = useDispatch();
     const {id} = useParams()
     const oneNote = useSelector((state) => state.notes[id]);
