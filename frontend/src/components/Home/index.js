@@ -100,10 +100,14 @@ const Home = () => {
   if (sessionUser) {
     sessionHome = (
       <>
+        <div className="main-background">
+
+        </div>
           <div className="welcome-container">
-                <h2>Hello {sessionUser.username}.</h2>
-                <h1>***</h1>
-                <h2> Let's get Started.</h2>
+              <div className="usernameColor">
+                <h1 className="username">Hello {sessionUser.username}.</h1>
+              </div>
+                <h1 className="stars">***</h1>
           </div>
       <div className="middle-navU">
         <div className="booksU">
@@ -113,19 +117,20 @@ const Home = () => {
           </NavLink>
 {/*
           <button className="pixButtonU2">
-            <img className="pixelnoteU2" src={logo2} />
-            Features
+          <img className="pixelnoteU2" src={logo2} />
+          Features
           </button>
           <button className="pixButtonU3">
-            <img className="pixelnoteU3" src={logo3} />
-            Benefits
-          </button> */}
+          <img className="pixelnoteU3" src={logo3} />
+          Benefits
+        </button> */}
           <NavLink exact to="/notes" className="pixButtonU4">
             <img className="pixelnoteU4" src={logo4} />
             All Notes
           </NavLink>
         </div>
-        <div >
+        <h2 className="letsStart"> Let's get Started.</h2>
+        <div>
         </div>
     </div>
 

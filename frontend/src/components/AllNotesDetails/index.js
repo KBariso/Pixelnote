@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { Redirect } from "react-router-dom";
-import Note from "../OneNote";
+import "./AllNotes.css"
 
 const NoteListDetail = ({ id, userId, notebookId, title, content, createdAt, updatedAt}) => {
   const [selectedNote, setSelectedNote] = useState()
@@ -14,9 +14,10 @@ const NoteListDetail = ({ id, userId, notebookId, title, content, createdAt, upd
 
   return (
     <>
-    <div>
-      <NavLink to={`/notes/${id}`}>
-        <h3 onClick={()=>setSelectedNote(id)}>{title}</h3>
+    {/* <h1>Notes</h1> */}
+    <div className="notesContainer">
+      <NavLink className="note" to={`/notes/${id}`}>
+        <h3 className="notesList" onClick={()=>setSelectedNote(id)}>{title}</h3>
       </NavLink>
       {/* <p>{content}</p> */}
       {/* {selectedNote &&

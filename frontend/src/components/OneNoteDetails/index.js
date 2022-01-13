@@ -1,15 +1,15 @@
-import React from "react";
+// import React from "react";
 
-// import { useSelector } from "react-redux";
+// // import { useSelector } from "react-redux";
 
-const NoteDetails = ({id, userId, title, content}) => {
-  return (
-    <div>
-        {/* <h3>{userId}</h3> */}
-        <h3>{title}</h3>
-        {/* <p>{content}</p> */}
-    </div>
-  );
-};
+// const NoteDetails = ({id, userId, title, content}) => {
+//   return (
+//     <div className="listContainer">
+//         {/* <h3>{userId}</h3> */}
+//         <h1 className="faf">{title}</h1>
+//         {/* <p>{content}</p> */}
+//     </div>
+//   );
+// };
 
-export default NoteDetails;
+// export default NoteDetails;

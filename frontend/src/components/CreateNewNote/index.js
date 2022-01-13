@@ -54,8 +54,8 @@ const CreateNewNote = () => {
 
 
  return (
-     <div>
-        <form onSubmit={handleSubmit}>
+     <div className="formContainer">
+        <form className="form" onSubmit={handleSubmit}>
            {errors.length > 0 && (
                <ul className="errors">
                  {errors.map((error) => (
@@ -63,12 +63,12 @@ const CreateNewNote = () => {
                  ))}
                </ul>
              )}
-            <input
+            <input className="titleInput"
                placeholder="Title"
                type="text"
                value={title}
                onChange={updateTitle}/>
-           <textarea
+           <textarea className="contentInput"
                placeholder="Type to Start"
                type="text"
                value={content}

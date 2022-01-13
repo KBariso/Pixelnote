@@ -111,8 +111,8 @@ const notesReducer = (state = initialState, action) => {
     case EDIT_ONE_NOTE:
       return {...state, [action.note.id]: action.note}
     case DELETE_ONE_NOTE:
-      return newState = {...state};
-      delete newState[action.note.noteId];
+      newState = {...state};
+      delete newState[action.noteId];
       return {newState}
     default:
       return state;

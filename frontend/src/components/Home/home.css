@@ -7,6 +7,33 @@
     color: black;
 }
 
+.usernameColor {
+    /* background-color: #4fb4b1; */
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+.username {
+    /* background-color: #4fb4b1; */
+    color: white;
+    padding-top: 7%;
+}
+
+.stars {
+    padding-top: 15px;
+    color: white;
+}
+
+.letsStart {
+    padding-top: 10px;
+    padding-left: 20px;
+    color: white;
+    display:flex;
+    flex-direction: column;
+}
+
 .signup:hover {
     background-color: #f38831;
 }
@@ -20,10 +47,11 @@
 
 .middle-navU {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     text-align: center;
     justify-content: center;
-    background-color: #e5771e;
+    padding-top: 40px;
+    /* background-color: #e5771e; */
 }
 
 .books {
@@ -36,10 +64,9 @@
 .booksU {
     display: flex;
     /* flex-direction: column; */
-    justify-content: space-around;
-    width: 35%;
-    padding-top: 10px;
-    padding-left: 15px;
+    justify-content: space-evenly;
+    width: 30%;
+    padding-left: 35%;
     /* background-color: #75c8ae; */
 }
 
@@ -59,7 +86,7 @@
     flex-direction: column;
     align-items: center;
     /* align-items: flex-start; */
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -139,7 +166,7 @@
     flex-direction: column;
     align-items: center;
 
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -185,4 +212,10 @@ p {
     flex-direction: column;
     align-content: center;
     text-align: center;
+    justify-content: center;
+}
+
+
+.main {
+    display: absolute;
 }

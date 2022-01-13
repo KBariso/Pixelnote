@@ -53,17 +53,19 @@ const EditOneNote = () => {
         };
 
         let updatedNote = await dispatch(editNote(updatedPayload));
-        if (updatedNote) {
+        if (!updatedNote) {
           history.push(`/notes`);
         }
       };
 
-      const handleDelete = (e) => {
+      const handleDelete = async(e) => {
         e.preventDefault();
-        const deleteOneNote = { userId, noteId };
-        let deletedNote = dispatch(deleteNote(deleteOneNote));
-        if (deletedNote) {
+        const deleteOneNote = { noteId };
+        // console.log(deleteOneNote)
+        const deletedNote = await dispatch(deleteNote(deleteOneNote));
+        if (!deletedNote) {
           history.push(`/notes`);
+
         }
       };
 

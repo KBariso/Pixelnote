@@ -1,0 +1,24 @@
+.content-container {
+    display:flex;
+    position: absolute;
+
+    top:15%;
+    margin-left: 60%;
+    flex-direction: row;
+    /* margin-bottom: 55%; */
+}
+
+.content {
+    width:70%;
+    /* height: 60%; */
+}
+
+.editButton {
+    color: white;
+    margin-left: 20px;
+    border: #FF30BD solid;
+    text-decoration-color: #FF30BD;
+    padding: 10px;
+    height: fit-content;
+
+}
