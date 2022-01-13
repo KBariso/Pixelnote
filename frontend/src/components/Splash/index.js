@@ -16,6 +16,7 @@ const Splash = () => {
           <img className="pixelnote-gif" src={logo1} />
         </div>
         <div className="press-start">
+          <p className="splashDescription">Create a personal space for all your most important ideas and information...All in the style of your 8-bit nostalgia</p>
           <NavLink className="start-button" to="/home">
             Press To Start
           </NavLink>

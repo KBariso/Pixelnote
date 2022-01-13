@@ -176,6 +176,7 @@
     flex-direction: column;
     padding-top: 15px;
     align-items: center;
+    color: white;
 }
 
 .secondDescription {
@@ -183,6 +184,7 @@
     flex-direction: column;
     padding-top: 15px;
     align-items: center;
+    color: white;
 }
 
 p {
