@@ -28,7 +28,7 @@ const CreateNewNote = () => {
         if (!title.length) {
             errors.push("Please provide a title for your note")
         }
-        if (content.length === 0) {
+        if (!content.length) {
             errors.push("Please enter your note")
         }
         setErrors(errors)
@@ -56,7 +56,7 @@ const CreateNewNote = () => {
  return (
      <div className="formContainer">
         <form className="form" onSubmit={handleSubmit}>
-           {errors.length > 0 && (
+           {errors.length && (
                <ul className="errors">
                  {errors.map((error) => (
                    <li key={error}>{error}</li>
@@ -75,7 +75,7 @@ const CreateNewNote = () => {
                onChange={updateContent}
            />
            <button type="submit">Click to Continue</button>
-           <NavLink to="/notes">Cancel</NavLink>
+           <NavLink className="cancelCreateBtn" to="/notes">Cancel</NavLink>
         </form>
 
      </div>

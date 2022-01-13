@@ -1,0 +1,18 @@
+.titleInputEdit {
+    width: 25%;
+    height:15%
+}
+.cancelEditBtn {
+    color: black;
+    margin-top: 20px;
+}
+
+.deleteBtnEdit {
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    justify-content: flex-end;
+    text-decoration-line: underline;
+    text-decoration-color: red;
+    margin-bottom: 5px;
+}

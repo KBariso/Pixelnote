@@ -17,3 +17,13 @@
     width: 90%;
     height: 100%
 }
+
+.titleInput {
+    width: 25%;
+    height:15%
+}
+
+.cancelCreateBtn {
+    color: black;
+    margin-top: 20px;
+}

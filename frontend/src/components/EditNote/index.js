@@ -5,6 +5,7 @@ import { getAllNotes, getOneNote } from "../../store/notes";
 import { NavLink } from "react-router-dom";
 import { editNote } from "../../store/notes";
 import { deleteNote } from "../../store/notes";
+import "./editNote.css"
 
 const EditOneNote = () => {
     const dispatch = useDispatch();
@@ -29,6 +30,19 @@ const EditOneNote = () => {
     const [content, setContent] = useState(oneNote?.content);
     const [errors, setErrors] = useState([]);
 
+
+    useEffect(() => {
+      const errors = [];
+      if (!title.length) {
+          errors.push("Please provide a title for your note")
+      }
+      if (!content.length) {
+          errors.push("Please enter your note")
+      }
+      setErrors(errors)
+  },[title, content])
+
+
     useEffect(() => {
 
         if (oneNote) {
@@ -45,6 +59,7 @@ const EditOneNote = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (errors.length > 0) return;
 
         const updatedPayload = {
             noteId,
@@ -57,6 +72,8 @@ const EditOneNote = () => {
           history.push(`/notes`);
         }
       };
+
+
 
       const handleDelete = async(e) => {
         e.preventDefault();
@@ -71,8 +88,8 @@ const EditOneNote = () => {
 
     return(
         <>
-     <div>
-        <form onSubmit={handleSubmit}>
+     <div className="formContainer">
+        <form className="form" onSubmit={handleSubmit}>
            {errors.length > 0 && (
                <ul className="errors">
                  {errors.map((error) => (
@@ -80,20 +97,20 @@ const EditOneNote = () => {
                  ))}
                </ul>
              )}
-            <input
+            <input className="titleInputEdit"
                placeholder="Title"
                type="text"
                value={title}
                onChange={updateTitle}/>
-           <textarea
+           <textarea className="contentInput"
                placeholder="Type to Start"
                type="text"
                value={content}
                onChange={updateContent}
            />
            <button type="submit">Save Changes</button>
-           <NavLink to="/notes">Cancel</NavLink>
-           <button onClick={handleDelete}>
+           <NavLink className="cancelEditBtn" to="/notes">Cancel</NavLink>
+           <button className="deleteBtnEdit" onClick={handleDelete}>
                Delete
            </button>
         </form>

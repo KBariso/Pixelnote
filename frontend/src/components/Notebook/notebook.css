@@ -1,0 +1,22 @@
+.notebookContainer {
+   margin-left: 30%;
+}
+
+.notebookList {
+    /* background-color: brown; */
+    margin-top: 5%;
+    text-decoration-line: line-through;
+}
+
+/* .allNoteBooks {
+    margin-top: 20%;
+} */
+
+.headerNotebook {
+    color: red;
+    /* margin-left: 10%; */
+}
+
+.errorMessage {
+    text-decoration: none;
+}
