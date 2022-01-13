@@ -20,8 +20,9 @@ const NotesList = () => {
   const userNotes = notes.filter((note) => note.userId === user);
 
   return (
-    <div>
-      <div>
+    <div className="listContainer">
+      <div className="notesList">
+      <h1 className="notesHeader">All Notes</h1>
         {userNotes.map((note) => {
           // console.log(note.id);
           return (
@@ -37,8 +38,8 @@ const NotesList = () => {
           );
         })}
       </div>
-      <div>
-        <NavLink to="/notes/new">New Note</NavLink>
+      <div className="newNoteContainer">
+        <NavLink className="newNote" to="/notes/new">New Note</NavLink>
       </div>
     </div>
   );

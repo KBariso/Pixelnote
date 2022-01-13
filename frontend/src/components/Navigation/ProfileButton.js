@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { NavLink } from "react-router-dom";
 import * as sessionActions from '../../store/session';
 import { useHistory } from "react-router-dom";
+import './Navigation.css'
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
@@ -35,9 +36,7 @@ function ProfileButton({ user }) {
 
   return (
     <>
-      <NavLink to="/notebooks">Notebooks</NavLink>
-      <NavLink to="/notes">Notes</NavLink>
-      <button onClick={openMenu}>
+      <button onClick={openMenu}>Profile
         <i className="fas fa-id-badge" />
       </button>
       {showMenu && (
@@ -45,7 +44,7 @@ function ProfileButton({ user }) {
           <li>{user.username}</li>
           <li>{user.email}</li>
           <li>
-            <button onClick={logout}>Log Out</button>
+            <button className="logout" onClick={logout}>Log Out</button>
           </li>
         </ul>
       )}

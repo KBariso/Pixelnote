@@ -26,19 +26,22 @@ const Notebooks = () => {
   //any data manip, from our state. If an array - map and render, so you can have a subcomponent
 
   return (
-    <div>
-      {userNotebooks.map(({ id, userId, title, createdAt, updatedAt }) => {
-        return (
-          <Notebook
-            key={id}
-            userId={userId}
-            title={title}
-            createdAt={createdAt}
-            updatedAt={updatedAt}
-          />
-        );
-      })}
+    <div className="allNotebooks">
+        <div className="notebookList">
+          {userNotebooks.map(({ id, userId, title, createdAt, updatedAt }) => {
+            return (
+              <Notebook
+                key={id}
+                userId={userId}
+                title={title}
+                createdAt={createdAt}
+                updatedAt={updatedAt}
+              />
+            );
+          })}
+        </div>
     </div>
+
   );
 };
 

@@ -3,6 +3,11 @@
 
 html {
     /* display: flexbox; */
-    background-color: #ffecb4;
+    /* background-color: #ffecb4; */
+    background-image: url('./Images/Home-page-screen.gif');
+    background-repeat: no-repeat;
+    background-size:100%;
+    background-position: center;
+    background-attachment: fixed;
     font-family: 'Press Start 2P', cursive;
 }

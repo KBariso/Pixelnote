@@ -1,0 +1,17 @@
+.listContainer {
+    display: flex;
+    text-decoration: turquoise;
+    width: fit-content;
+    justify-content: flex-start;
+    margin-top: 5%;
+    border: white solid;
+    margin-left: 15%;
+}
+
+.notesHeader {
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-decoration-line: underline;
+    padding-left: 25%;
+}

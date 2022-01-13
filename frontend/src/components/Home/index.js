@@ -10,6 +10,7 @@ import "./home.css";
 
 const Home = () => {
   const sessionUser = useSelector((state) => state.session.user);
+  // console.log(sessionUser.username)
 
   const [showFirstImg, setShowFirstImg] = useState(false);
   const [showSecondImg, setShowSecondImg] = useState(false);
@@ -99,6 +100,15 @@ const Home = () => {
   if (sessionUser) {
     sessionHome = (
       <>
+        <div className="main-background">
+
+        </div>
+          <div className="welcome-container">
+              <div className="usernameColor">
+                <h1 className="username">Hello {sessionUser.username}.</h1>
+              </div>
+                <h1 className="stars">***</h1>
+          </div>
       <div className="middle-navU">
         <div className="booksU">
           <NavLink exact to="/notebooks" className="pixButtonU1">
@@ -107,19 +117,23 @@ const Home = () => {
           </NavLink>
 {/*
           <button className="pixButtonU2">
-            <img className="pixelnoteU2" src={logo2} />
-            Features
+          <img className="pixelnoteU2" src={logo2} />
+          Features
           </button>
           <button className="pixButtonU3">
-            <img className="pixelnoteU3" src={logo3} />
-            Benefits
-          </button> */}
+          <img className="pixelnoteU3" src={logo3} />
+          Benefits
+        </button> */}
           <NavLink exact to="/notes" className="pixButtonU4">
             <img className="pixelnoteU4" src={logo4} />
             All Notes
           </NavLink>
         </div>
+        <h2 className="letsStart"> Let's get Started.</h2>
+        <div>
+        </div>
     </div>
+
       </>
     )
   } else {
@@ -138,11 +152,11 @@ const Home = () => {
           </button>
           <button className="pixButton3">
             <img className="pixelnote3" src={logo3} onClick={openThirdImg} />
-            Benefits
+            How to Use
           </button>
           <button className="pixButton4">
             <img className="pixelnote4" src={logo4} onClick={openFourthImg} />
-            Yes
+            Who We Are
           </button>
         </div>
         {showFirstImg && (
@@ -153,7 +167,7 @@ const Home = () => {
         )}
         {showSecondImg && (
           <div className="secondDescription">
-            <h1>Hiii</h1>
+            <h1>Features</h1>
             <ul className="listBenefits">
               <li>* Get more from your note-taking app</li>
               <li>* Take notes and take action</li>
@@ -162,13 +176,15 @@ const Home = () => {
           </div>
         )}
         {showThirdImg && (
-          <div>
-            <h1>yuhhh</h1>
+          <div className="secondDescription">
+            <h1>How to Use</h1>
+            <p>Easy! All you need is to do is make an account with us and start making your very own notes and notebooks</p>
           </div>
         )}
         {showFourthImg && (
-          <div>
-            <h1>yaaaassss</h1>
+          <div className="secondDescription">
+            <h1>Who We Are</h1>
+            <p>We are simply an Evernote clone. Packed with 8-bit nostalgia. Starting with you, the main character.</p>
           </div>
         )}
         {/* <NavLink className="signup" to="/signup">

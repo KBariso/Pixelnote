@@ -1,0 +1,29 @@
+.formContainer {
+    width: 100%;
+    flex-direction: row;
+    align-content: center;
+}
+
+
+.form {
+    background-color: #86b460;
+    margin-top: 8%;
+    margin-left: 15%;
+/* justify-content: center; */
+    width: 70%;
+}
+
+.contentInput {
+    width: 90%;
+    height: 100%
+}
+
+.titleInput {
+    width: 25%;
+    height:15%
+}
+
+.cancelCreateBtn {
+    color: black;
+    margin-top: 20px;
+}

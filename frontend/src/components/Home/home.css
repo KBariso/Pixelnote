@@ -7,6 +7,33 @@
     color: black;
 }
 
+.usernameColor {
+    /* background-color: #4fb4b1; */
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+.username {
+    /* background-color: #4fb4b1; */
+    color: white;
+    padding-top: 7%;
+}
+
+.stars {
+    padding-top: 15px;
+    color: white;
+}
+
+.letsStart {
+    padding-top: 10px;
+    padding-left: 20px;
+    color: white;
+    display:flex;
+    flex-direction: column;
+}
+
 .signup:hover {
     background-color: #f38831;
 }
@@ -22,8 +49,9 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    justify-content: space-around;
-    background-color: #75c8ae;
+    justify-content: center;
+    padding-top: 40px;
+    /* background-color: #e5771e; */
 }
 
 .books {
@@ -35,9 +63,10 @@
 
 .booksU {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: space-evenly;
-    padding-top: 10px;
+    width: 30%;
+    padding-left: 35%;
     /* background-color: #75c8ae; */
 }
 
@@ -49,19 +78,23 @@
 
 .pixelnote1{
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 15px;;
 }
 
 .pixButtonU1 {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    color: black;
+    align-items: center;
+    /* align-items: flex-start; */
+    color: white;
+    text-decoration: none;
 }
 
 .pixelnoteU1{
     padding-top: 15px;
     padding-bottom: 15px;
+    padding-left: 25px;;
+
 }
 
 .pixelnote2{
@@ -78,6 +111,7 @@
 .pixelnoteU2{
     padding-top: 15px;
     padding-bottom: 10px;
+
 }
 
 .pixButtonU2 {
@@ -123,13 +157,17 @@
 .pixelnoteU4{
     padding-top: 20px;
     padding-bottom: 15px;
+    padding-left: 25px;
+
 }
 
 .pixButtonU4 {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    color: black;
+    align-items: center;
+
+    color: white;
+    text-decoration: none;
 }
 
 
@@ -138,6 +176,7 @@
     flex-direction: column;
     padding-top: 15px;
     align-items: center;
+    color: white;
 }
 
 .secondDescription {
@@ -145,6 +184,7 @@
     flex-direction: column;
     padding-top: 15px;
     align-items: center;
+    color: white;
 }
 
 p {
@@ -167,4 +207,17 @@ p {
     color: black;
     padding:15px;
     list-style-type: none;
+}
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.main {
+    display: absolute;
 }

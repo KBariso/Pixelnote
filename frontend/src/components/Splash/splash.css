@@ -6,6 +6,11 @@
 
 }
 
+.splashDescription {
+    background-color: hotpink;
+    text-align: center;
+    justify-content: center;
+}
 
 .pacman {
     padding-top: 20px;
@@ -15,16 +20,20 @@
 
 .press-start {
     display: flex;
-    padding-top: 100px;
-    justify-content: center;
+    flex-direction: column;
+    padding-top: 35px;
+    /* margin-left: 35%; */
+    align-items: center;
 }
 
 .start-button {
     border:black solid;
     background-color: black;
+    width: fit-content;
     padding: 10px;
     text-decoration: none;
     color: white;
+    /* margin-left: 10%; */
 }
 
 .start-button:hover {

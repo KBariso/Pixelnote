@@ -28,3 +28,13 @@
     background-color: white;
 
 }
+
+/* .profile-dropdown {
+    color: white
+} */
+
+.logout {
+    background-color: #c6b955;
+    border: #86b460 solid;
+    color: black;
+}
