@@ -63,7 +63,7 @@ const EditOneNote = () => {
         const deleteOneNote = { userId, noteId };
         let deletedNote = dispatch(deleteNote(deleteOneNote));
         if (deletedNote) {
-          history.push("/notes");
+          history.push(`/notes`);
         }
       };
 

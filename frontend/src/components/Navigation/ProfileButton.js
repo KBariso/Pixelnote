@@ -35,9 +35,7 @@ function ProfileButton({ user }) {
 
   return (
     <>
-      <NavLink to="/notebooks">Notebooks</NavLink>
-      <NavLink to="/notes">Notes</NavLink>
-      <button onClick={openMenu}>
+      <button onClick={openMenu}>Profile
         <i className="fas fa-id-badge" />
       </button>
       {showMenu && (
