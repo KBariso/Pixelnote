@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect, useHistory, useParams } from "react-router-dom";
-import { getOneNote } from "../../store/notes";
+import { getAllNotes, getOneNote } from "../../store/notes";
 import { NavLink } from "react-router-dom";
 import { editNote } from "../../store/notes";
+import { deleteNote } from "../../store/notes";
 
 const EditOneNote = () => {
     const dispatch = useDispatch();
@@ -12,7 +13,7 @@ const EditOneNote = () => {
     console.log(id)
 
     useEffect(() => {
-        dispatch(getOneNote(id));
+        dispatch(getAllNotes(id));
         console.log(id)
         console.log("IM HERE")
     }, [dispatch, id]);
@@ -20,7 +21,7 @@ const EditOneNote = () => {
     const oneNote = useSelector((state) => state.notes[id]);
     // console.log(oneNote)
 
-    const user = useSelector((state) => state.session.user?.id)
+    const userId = useSelector((state) => state.session.user?.id)
     // console.log(user.noteId)
     const noteId = id;
 
@@ -40,7 +41,7 @@ const EditOneNote = () => {
     const updateTitle = (e) => setTitle(e.target.value);
     const updateContent = (e) => setContent(e.target.value)
 
-    if (!user) return <Redirect to="/home" />;
+    if (!userId) return <Redirect to="/home" />;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -54,6 +55,15 @@ const EditOneNote = () => {
         let updatedNote = await dispatch(editNote(updatedPayload));
         if (updatedNote) {
           history.push(`/notes`);
+        }
+      };
+
+      const handleDelete = (e) => {
+        e.preventDefault();
+        const deleteOneNote = { userId, noteId };
+        let deletedNote = dispatch(deleteNote(deleteOneNote));
+        if (deletedNote) {
+          history.push("/notes");
         }
       };
 
@@ -81,6 +91,9 @@ const EditOneNote = () => {
            />
            <button type="submit">Save Changes</button>
            <NavLink to="/notes">Cancel</NavLink>
+           <button onClick={handleDelete}>
+               Delete
+           </button>
         </form>
 
      </div>

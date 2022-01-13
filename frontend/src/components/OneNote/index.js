@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import { getOneNote } from "../../store/notes";
 import { NavLink } from "react-router-dom";
 import { Redirect } from "react-router-dom";
+import { deleteNote } from "../../store/notes";
+import { useHistory } from "react-router-dom";
 
 import './OneNote.css'
 
@@ -16,6 +18,10 @@ const Note = () =>  {
     // const sessionNotes = useSelector(state => state.notes.id)
     // const oneNote = sessionNotes[noteId].noteId
     // const oneNote = useSelector((state) => state.notes[noteId]);
+    const userId = useSelector((state) => state.session.user?.id)
+    // console.log(user.noteId)
+    const noteId = id;
+    const history = useHistory()
 
 
     useEffect(() => {
@@ -29,13 +35,25 @@ const Note = () =>  {
     // console.log(noteId)
     // console.log(oneNote)
 
+    const handleDelete = (e) => {
+      e.preventDefault();
+      const deleteOneNote = { userId, noteId };
+      let deletedNote = dispatch(deleteNote(deleteOneNote));
+      if (deletedNote) {
+        history.push("/notes");
+      }
+    };
+
+
       return (
         <div>
       <p>{oneNote?.content}</p>
         <div>
         </div>
-
-
+        <NavLink to={`/notes/${id}/edit`}>Edit</NavLink>
+        <button onClick={handleDelete}>
+               Delete
+           </button>
         </div>
       );
 

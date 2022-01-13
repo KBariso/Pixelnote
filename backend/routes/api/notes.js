@@ -52,11 +52,14 @@ router.put(
 
 
 
-// //Delete one note
-// router.delete("/:id", asyncHandler(async function (req, res) {
-//   const noteId = await ItemsRepository.delete(req.params.id);
-//   return res.json({ noteId });
-// }));
+//Delete one note
+router.delete("/:id(\\d+)", requireAuth, asyncHandler(async function (req, res) {
+  const id = parseInt(req.params.id)
+  const note = await Note.findByPk(id);
+  const {noteId} = req.body;
+  await note.destroy();
+  return res.json(noteId);
+}));
 
 
 module.exports = router;

@@ -74,7 +74,7 @@ const CreateNewNote = () => {
                value={content}
                onChange={updateContent}
            />
-           <button type="submit">Create new Note</button>
+           <button type="submit">Click to Continue</button>
            <NavLink to="/notes">Cancel</NavLink>
         </form>
 

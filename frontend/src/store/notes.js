@@ -3,7 +3,8 @@ import { csrfFetch } from "./csrf";
 const GET_ALL_NOTES = "notes/GET_ALL_NOTES";
 const GET_ONE_NOTE = "notes/GET_ONE_NOTE";
 const ADD_ONE_NOTE = "notes/ADD_ONE_NOTE";
-const EDIT_ONE_NOTE = "notes/EDIT_ONE_NOTE"
+const EDIT_ONE_NOTE = "notes/EDIT_ONE_NOTE";
+const DELETE_ONE_NOTE = "notes/DELETE_ONE_NOTE";
 
 const loadAllNotes = (notes) => ({
   type: GET_ALL_NOTES,
@@ -73,6 +74,22 @@ export const editNote = ({noteId, title, content, createdAt, updatedAt}) => asyn
   }
 }
 
+const deleteOneNote = (noteId) => ({
+  type: DELETE_ONE_NOTE,
+  noteId,
+})
+
+export const deleteNote = ({ userId, noteId }) => async (dispatch) => {
+  const res = await csrfFetch(`/api/notes/${noteId}`, {
+    method: "DELETE",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ noteId })
+  });
+  if (res.ok) {
+    const deletedNote = await res.json();
+    dispatch(deleteOneNote(deletedNote));
+  }
+}
 
 
 
@@ -93,6 +110,10 @@ const notesReducer = (state = initialState, action) => {
       return {...state, [action.note.id]: action.note}
     case EDIT_ONE_NOTE:
       return {...state, [action.note.id]: action.note}
+    case DELETE_ONE_NOTE:
+      return newState = {...state};
+      delete newState[action.note.noteId];
+      return {newState}
     default:
       return state;
   }

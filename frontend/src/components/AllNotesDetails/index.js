@@ -23,8 +23,8 @@ const NoteListDetail = ({ id, userId, notebookId, title, content, createdAt, upd
         <Note noteId={selectedNote} clickHandler={()=>{setSelectedNote(null)}}/>
       } */}
       {/* <h1>{oneNote?.content}</h1> */}
-
     </div>
+
     </>
 
   );
