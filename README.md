@@ -19,7 +19,7 @@ In terminal:
 
 
 ### `Database`
-- Copy values from the .env-example `backend` folder and replace values with your own information.
+- Copy values from the .env-example `backend` folder and replace values with your own information into a newly created .env file.
 
 #### Enter commands in terminal in order to receive models, migrations, and seeders in your database:
 - `npx dotenv sequelize db:create`
