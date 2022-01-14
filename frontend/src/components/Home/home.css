@@ -188,6 +188,7 @@
 .secondDescription {
     display: flex;
     flex-direction: column;
+
     padding-top: 15px;
     align-items: center;
     color: white;
@@ -204,6 +205,28 @@ p {
   border-radius: 20px;
   border: whitesmoke solid;
 }
+
+.descriptionKB {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.kielvin-profile {
+    display: flex;
+    justify-content: space-around;
+}
+
+.KBLinks {
+    margin-top: 5px;
+    display: flex;
+    align-content: space-between;
+}
+
+
+
+
 
 .listBenefits {
     display: flex;

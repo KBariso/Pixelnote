@@ -184,7 +184,21 @@ const Home = () => {
         {showFourthImg && (
           <div className="secondDescription">
             <h1>Who We Are</h1>
-            <p>We are simply an Evernote clone. Packed with 8-bit nostalgia. Starting with you, the main character.</p>
+            <p className="descriptionKB">We are simply an Evernote clone. Packed with 8-bit nostalgia. Starting with you, the main character.
+              <p className="descriptionKB"> Meet the Creator
+                <h2 > Kielvin Bariso
+                  <div className="kielvin-profile">
+                    <div className="KBLinks">
+                      <a href='https://github.com/KBariso' i className="fa fa-github" aria-hidden="true" target="_blank"> </a>
+                      <a href='https://www.linkedin.com/in/kielvin-bariso/' i className="fab fa-linkedin-in" target="_blank"> </a>
+                    </div>
+                  </div>
+                </h2>
+              </p>
+
+            </p>
+
+
           </div>
         )}
         {/* <NavLink className="signup" to="/signup">
