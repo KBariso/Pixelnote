@@ -8,10 +8,7 @@ Link to Pixelnote: https://pixelnote.herokuapp.com/
 
 In order to run application, please refer to installation instructions.
 
-## Installation
-
-
-
+# Installation
 
 ### `npm install`
 In terminal:
@@ -34,6 +31,13 @@ In terminal:
 - `npm start` at root of backend folder
 - `npm start` at root of frontend folder
 
+# Dependencies
+- Javascript
+- React
+- Redux
+- Express
+- PostgreSQL
+- CSS
 
 
 ## [Feature List](https://github.com/KBariso/Pixelnote/wiki/Features-List)
