@@ -56,7 +56,7 @@ const CreateNewNote = () => {
  return (
      <div className="formContainer">
         <form className="form" onSubmit={handleSubmit}>
-           {errors.length && (
+           {errors.length > 0 && (
                <ul className="errors">
                  {errors.map((error) => (
                    <li key={error}>{error}</li>
