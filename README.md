@@ -1,6 +1,6 @@
 Welcome to the Pixelnote README!
 
-[Pixelnote](https://pixelnote.herokuapp.com/) is an [Evernote](https://evernote.com/) clone, that allows users to create personal notes as well as store them in notebooks, designed as an homage to the 64-bit video game style.
+[Pixelnote](https://pixelnote.herokuapp.com/) is an [Evernote](https://evernote.com/) clone, that allows users to create personal notes as well as store them in notebooks, designed as an homage to the 8-bit video game style.
 
 
 
