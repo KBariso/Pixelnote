@@ -11,6 +11,8 @@
     margin-left: 15%;
 /* justify-content: center; */
     width: 70%;
+    border-radius: 20px;
+    border: whitesmoke solid;
 }
 
 .contentInput {

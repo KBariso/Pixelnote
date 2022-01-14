@@ -34,7 +34,7 @@ const CreateNewNote = () => {
         setErrors(errors)
     },[title, content])
 
-    if (!user) return <Redirect to="/login" />;
+    if (!user) return <Redirect to="/home" />;
 
     const handleSubmit = async (e) => {
         e.preventDefault();

@@ -10,6 +10,8 @@
     background-color: hotpink;
     text-align: center;
     justify-content: center;
+    border-radius: 20px;
+    border: whitesmoke solid;
 }
 
 .pacman {

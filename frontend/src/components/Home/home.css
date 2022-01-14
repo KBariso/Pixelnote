@@ -201,6 +201,8 @@ p {
   background-color: #75c8ae;
   color: black;
   padding:15px;
+  border-radius: 20px;
+  border: whitesmoke solid;
 }
 
 .listBenefits {
@@ -213,6 +215,8 @@ p {
     color: black;
     padding:15px;
     list-style-type: none;
+    border-radius: 20px;
+    border: whitesmoke solid;
 }
 
 .welcome-container {
