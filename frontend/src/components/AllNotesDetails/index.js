@@ -2,14 +2,15 @@ import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, useParams } from "react-router-dom";
 import "./AllNotes.css"
 
 const NoteListDetail = ({ id, userId, notebookId, title, content, createdAt, updatedAt}) => {
   const [selectedNote, setSelectedNote] = useState()
   const user = useSelector((state) => state.session.user?.id)
+  // const { id } = useParams()
 
-  if (!user) return <Redirect to="/login" />;
+  if (!user) return <Redirect to="/home" />;
 
 
   return (

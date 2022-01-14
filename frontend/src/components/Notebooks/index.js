@@ -27,7 +27,11 @@ const Notebooks = () => {
 
   return (
     <div className="allNotebooks">
+
         <div className="notebookList">
+        <div >
+      <h2 className="WOP">This page is currently under construction</h2>
+    </div>
           {userNotebooks.map(({ id, userId, title, createdAt, updatedAt }) => {
             return (
               <Notebook

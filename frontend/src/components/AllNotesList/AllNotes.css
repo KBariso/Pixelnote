@@ -3,7 +3,7 @@
     text-decoration: turquoise;
     width: fit-content;
     justify-content: flex-start;
-    margin-top: 5%;
+    margin-top: 4%;
     border: white solid;
     margin-left: 15%;
 }
@@ -14,4 +14,10 @@
     justify-content: center;
     text-decoration-line: underline;
     padding-left: 25%;
+}
+
+.newNote {
+    border:turquoise solid;
+    padding: 15px;
+    text-decoration-color: turquoise;
 }
