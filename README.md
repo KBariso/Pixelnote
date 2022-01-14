@@ -1,6 +1,10 @@
 Welcome to the Pixelnote README!
 
-Pixelnote is a [Evernote](https://evernote.com/) clone, that allows users to create personal notes as well as store them in notebooks, designed as an homage to the 64-bit video game style.
+[Pixelnote](https://pixelnote.herokuapp.com/) is a [Evernote](https://evernote.com/) clone, that allows users to create personal notes as well as store them in notebooks, designed as an homage to the 64-bit video game style.
+
+
+
+Link to Pixelnote: https://pixelnote.herokuapp.com/
 
 In order to run application, please refer to installation instructions.
 
@@ -19,7 +23,7 @@ Enter commands in terminal in order to receive models, migrations, and seeders i
 ### `npm start`
 In terminal:
 - `npm start` at root of backend folder
-- `npm start` at root of backend folder
+- `npm start` at root of frontend folder
 
 
 

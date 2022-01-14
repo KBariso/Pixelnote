@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { NavLink, Redirect } from "react-router-dom";
 import { getAllNotes } from "../../store/notes";
 import NoteListDetail from "../AllNotesDetails";
 // import Note from "../OneNote";
@@ -16,8 +16,9 @@ const NotesList = () => {
   const user = useSelector((state) => state.session?.user?.id);
   const notesObj = useSelector((state) => state.notes);
   const notes = Object.values(notesObj);
-  // console.log(user)
   const userNotes = notes.filter((note) => note.userId === user);
+  // console.log(notes)
+  if (!user) return <Redirect to="/home" />;
 
   return (
     <div className="listContainer">

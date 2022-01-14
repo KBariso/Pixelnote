@@ -58,7 +58,8 @@
     display: flex;
     justify-content: space-evenly;
     padding-top: 10px;
-    background-color: #e5771e;
+    /* background-color: #e5771e; */
+    padding-top: 7%;
 }
 
 .booksU {
@@ -74,11 +75,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
 }
 
 .pixelnote1{
     padding-top: 15px;
-    padding-bottom: 15px;;
+    padding-bottom: 15px;
+
 }
 
 .pixButtonU1 {
@@ -93,7 +96,7 @@
 .pixelnoteU1{
     padding-top: 15px;
     padding-bottom: 15px;
-    padding-left: 25px;;
+    padding-left: 25px;
 
 }
 
@@ -106,6 +109,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
 }
 
 .pixelnoteU2{
@@ -130,6 +134,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
 }
 
 .pixelnoteU3{
@@ -152,6 +157,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
 }
 
 .pixelnoteU4{
