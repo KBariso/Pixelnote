@@ -16,5 +16,12 @@
     justify-content: flex-end;
     text-decoration-line: underline;
     text-decoration-color: red;
+    /* border: red solid; */
     margin-bottom: 5px;
+}
+
+
+.deleteBtnEdit:hover {
+    color: red;
+    text-decoration-color: black;
 }

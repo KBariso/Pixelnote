@@ -34,7 +34,11 @@
 } */
 
 .logout {
-    background-color: #c6b955;
-    border: #86b460 solid;
+    background-color: #58f31a;
+    border: #3a750a solid;
     color: black;
+}
+
+.logout:hover {
+    background-color: rgb(30, 214, 246);
 }

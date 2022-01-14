@@ -20,5 +20,11 @@
     text-decoration-color: #FF30BD;
     padding: 10px;
     height: fit-content;
+}
 
+.editButton:hover {
+    color: black;
+    text-decoration-color: black;
+    border: #FF30BD solid;
+    background-color: #FF30BD;
 }
