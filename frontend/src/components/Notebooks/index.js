@@ -27,19 +27,19 @@ const Notebooks = () => {
 
   return (
     <div className="allNotebooks">
-
+4
         <div className="notebookList">
         <div >
       <h2 className="WOP">This page is currently under construction</h2>
     </div>
-          {userNotebooks.map(({ id, userId, title, createdAt, updatedAt }) => {
+          {userNotebooks.map((notebook) => {
             return (
               <Notebook
-                key={id}
-                userId={userId}
-                title={title}
-                createdAt={createdAt}
-                updatedAt={updatedAt}
+                id={notebook.id}
+                userId={notebook.userId}
+                title={notebook.title}
+                createdAt={notebook.createdAt}
+                updatedAt={notebook.updatedAt}
               />
             );
           })}

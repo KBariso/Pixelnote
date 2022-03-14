@@ -11,7 +11,7 @@ router.get('/', requireAuth, asyncHandler(async function (req, res) {
     return res.json(notebooks)
 }))
 
-router.get('/:id', requireAuth, asyncHandler(async function(req, res) {
+router.get('/:id(\\d+)', requireAuth, asyncHandler(async function(req, res) {
     const notebook = await Notebook.findByPk(req.params.id)
     return res.json(notebook)
 }))

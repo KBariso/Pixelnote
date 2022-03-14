@@ -7,6 +7,7 @@ import Navigation from "./components/Navigation";
 import Splash from "./components/Splash";
 import Home from "./components/Home";
 import Notebooks from "./components/Notebooks";
+import OneNotebookDetails from "./OneNotebookDetails";
 import NotesList from "./components/AllNotesList";
 import Note from "./components/OneNote";
 import CreateNewNote from "./components/CreateNewNote";
@@ -45,8 +46,12 @@ function App() {
               <Note />
             </Route>
           </Route>
+
           <Route path="/notebooks">
             <Notebooks />
+              <Route path="/notebooks/:id" exact>
+                <OneNotebookDetails />
+              </Route>
           </Route>
         </Switch>
       )}
