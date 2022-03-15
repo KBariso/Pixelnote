@@ -4,10 +4,21 @@
 html {
     /* display: flexbox; */
     /* background-color: #ffecb4; */
-    background-image: url('./Images/Home-page-screen.gif');
+    background: url('./Images/Home-page-screen.gif') no-repeat center center fixed;
     background-repeat: no-repeat;
-    background-size:100%;
+    /* background-size:100%; */
+    -webkit-background-size: 100% 85%;
+    /* -moz-background-size: 100% 100%; */
+
     background-position: center;
     background-attachment: fixed;
     font-family: 'Press Start 2P', cursive;
 }
+
+
+
+/* background-image: url('./Images/Home-page-screen.gif')no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; */

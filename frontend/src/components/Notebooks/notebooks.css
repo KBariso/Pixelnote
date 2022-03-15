@@ -3,3 +3,24 @@
     display:flex;
     justify-content: center;
 }
+
+/* .test8 {
+    display: flex;
+} */
+
+p.notebookListName {
+    width: 100%;
+    justify-content: center;
+    /* position: absolute; */
+    margin-right: 0%;
+    left: 10%;
+    margin-left: 15%;
+}
+
+.allNotebooks {
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    top: 25%;
+    left:15%;
+}

@@ -1,0 +1,13 @@
+.NoteBookNotes {
+    color: white;
+    background-color: blueviolet;
+}
+
+
+.NotebookNotesContainer {
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    top: 25%;
+    right:10%;
+}

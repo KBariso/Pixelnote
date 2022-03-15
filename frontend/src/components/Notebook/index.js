@@ -3,6 +3,7 @@ import './notebook.css'
 import { getAllNotes } from "../../store/notes";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import OneNotebookDetails from "../../OneNotebookDetails";
 
 
 const Notebook = ({id, userId, title, createdAt, updatedAt }) => {
@@ -20,11 +21,12 @@ const Notebook = ({id, userId, title, createdAt, updatedAt }) => {
     <>
       <div className="notebookContainer">
       <NavLink className="note" to={`/notebooks/${id}`}>
-        <p className="notebookList" onClick={()=>setSelectedNotebook(id)}>*{title}*
+        <p className="notebookListName" onClick={()=>setSelectedNotebook(id)}>{title}
         {/* <span className="errorMessage"> -UNAVAILABLE-</span> */}
         </p>
         </NavLink>
-    <h5 className="headerNotebook">Is currently work in progress</h5>
+        {/* <h5 className="headerNotebook">Is currently work in progress</h5> */}
+      {/* <OneNotebookDetails /> */}
       </div>
     </>
   );

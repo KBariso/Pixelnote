@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllNotebooks } from "../../store/notebooks";
 import Notebook from "../Notebook";
 import "./notebooks.css";
+import OneNotebookDetails from "../../OneNotebookDetails";
 
 const Notebooks = () => {
   const dispatch = useDispatch();
@@ -26,26 +27,28 @@ const Notebooks = () => {
   //any data manip, from our state. If an array - map and render, so you can have a subcomponent
 
   return (
-    <div className="allNotebooks">
-4
-        <div className="notebookList">
-        <div >
-      <h2 className="WOP">This page is currently under construction</h2>
-    </div>
-          {userNotebooks.map((notebook) => {
-            return (
-              <Notebook
+    <>
+      {/* <h2 className="WOP">This page is currently under construction</h2> */}
+      <div className="allNotebooks">
+        <div className="test8">
+          <div className="notebookList">
+            {userNotebooks.map((notebook) => {
+              return (
+                <Notebook
                 id={notebook.id}
                 userId={notebook.userId}
                 title={notebook.title}
                 createdAt={notebook.createdAt}
                 updatedAt={notebook.updatedAt}
-              />
-            );
-          })}
-        </div>
-    </div>
+                />
+                );
+              })}
 
+              <OneNotebookDetails />
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
