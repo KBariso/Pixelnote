@@ -20,12 +20,14 @@ const Notebook = ({id, userId, title, createdAt, updatedAt }) => {
   return (
     <>
       <div className="notebookContainer">
+
       <NavLink className="note" to={`/notebooks/${id}`}>
         <p className="notebookListName" onClick={()=>setSelectedNotebook(id)}>{title}
         {/* <span className="errorMessage"> -UNAVAILABLE-</span> */}
         </p>
         </NavLink>
         {/* <h5 className="headerNotebook">Is currently work in progress</h5> */}
+        {/* <h1>{title}</h1> */}
       {/* <OneNotebookDetails /> */}
       </div>
     </>

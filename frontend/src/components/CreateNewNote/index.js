@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Redirect, useHistory } from "react-router-dom";
 import { createNewNote } from "../../store/notes";
 import { NavLink } from "react-router-dom";
+import { getAllNotebooks } from "../../store/notebooks";
 import './createNewNote.css';
 
 const CreateNewNote = () => {
@@ -15,12 +16,29 @@ const CreateNewNote = () => {
 
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
+    const [notebook, setNotebook] = useState([])
     const [errors, setErrors] = useState([]);
+
+
+    const notebooksObj = useSelector((state) => state.notebooks);
+    const notebooks = Object.values(notebooksObj);
+    console.log(notebooks)
+    const userNotebooksArr = notebooks.filter(
+      (notebook) => notebook.userId === user
+    );
+    const userNotebooks = Object.values(userNotebooksArr)
+    console.log(userNotebooks[0].id)
+
+
+
 
 
     const updateTitle = (e) => setTitle(e.target.value);
     const updateContent = (e) => setContent(e.target.value)
 
+    useEffect(() => {
+      dispatch(getAllNotebooks());
+    }, [dispatch]);
 
 
     useEffect(() => {
@@ -40,9 +58,12 @@ const CreateNewNote = () => {
         e.preventDefault();
         if (errors.length > 0) return;
 
+        console.log(notebook)
+
         const payload = {
             userId,
             title,
+            notebookId: notebook,
             content
         };
 
@@ -74,6 +95,13 @@ const CreateNewNote = () => {
                value={content}
                onChange={updateContent}
            />
+              <select onChange={setNotebook} >
+                 <option value="none" selected disabled hidden>Select Notebook</option>
+                  {userNotebooks.map((notebook) => {
+                      return <option value={notebook.id}>{notebook.title}</option>
+                  })}
+              </select>
+
            <button type="submit">Click to Continue</button>
            <NavLink className="cancelCreateBtn" to="/notes">Cancel</NavLink>
         </form>

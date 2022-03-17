@@ -26,9 +26,9 @@ const loadOneNotebook = (notebook) => ({
 export const getOneNotebook = (id) => async (dispatch) => {
   const res = await csrfFetch(`/api/notebooks/${id}`);
   if (res.ok) {
-    const notebooks = await res.json();
-    dispatch(loadOneNotebook(notebooks));
-    return notebooks;
+    const notebook = await res.json();
+    dispatch(loadOneNotebook(notebook));
+    return notebook;
   }
 };
 

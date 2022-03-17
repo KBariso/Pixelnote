@@ -5,6 +5,7 @@ import { getAllNotebooks } from "../../store/notebooks";
 import Notebook from "../Notebook";
 import "./notebooks.css";
 import OneNotebookDetails from "../../OneNotebookDetails";
+// import { getOneNotebook } from "../store/notebooks";
 
 const Notebooks = () => {
   const dispatch = useDispatch();
@@ -24,6 +25,11 @@ const Notebooks = () => {
     (notebook) => notebook.userId === user
   );
 
+  // useEffect(() => {
+  //   dispatch(getOneNotebook());
+  // }, [dispatch]);
+
+
   //any data manip, from our state. If an array - map and render, so you can have a subcomponent
 
   return (
@@ -41,6 +47,7 @@ const Notebooks = () => {
                 createdAt={notebook.createdAt}
                 updatedAt={notebook.updatedAt}
                 />
+
                 );
               })}
 
