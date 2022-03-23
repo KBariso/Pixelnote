@@ -68,12 +68,10 @@ const EditOneNote = () => {
         };
 
         let updatedNote = await dispatch(editNote(updatedPayload));
-        if (!updatedNote) {
-          history.push(`/notes`);
-        }
+        // if (!updatedNote) {
+        //   // history.push(`/notes/`);
+        // }
       };
-
-
 
       const handleDelete = async(e) => {
         e.preventDefault();
@@ -88,7 +86,7 @@ const EditOneNote = () => {
 
     return(
         <>
-     <div className="formContainer">
+     <div className="formContainerEdit">
         <form className="form" onSubmit={handleSubmit}>
            {errors.length > 0 && (
                <ul className="errors">

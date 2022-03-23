@@ -16,6 +16,15 @@ router.get('/:id(\\d+)', requireAuth, asyncHandler(async function(req, res) {
     return res.json(notebook)
 }))
 
+router.post(
+    "/",
+    requireAuth,
+    asyncHandler(async function (req, res) {
+      const { userId, title, createdAt, updatedAt } = req.body;
+      const newNotebook = await Notebook.create({ userId, title, createdAt, createdAt, updatedAt });
+      return res.json(newNotebook);
+    })
+  );
 
 
 

@@ -35,6 +35,7 @@ const CreateNewNote = () => {
 
     const updateTitle = (e) => setTitle(e.target.value);
     const updateContent = (e) => setContent(e.target.value)
+    const updateNotebook = (e) => setNotebook(e.target.value)
 
     useEffect(() => {
       dispatch(getAllNotebooks());
@@ -58,14 +59,13 @@ const CreateNewNote = () => {
         e.preventDefault();
         if (errors.length > 0) return;
 
-        console.log(notebook)
-
         const payload = {
             userId,
             title,
             notebookId: notebook,
             content
         };
+        console.log(payload, "THIS IS THE HANDLESUBMIT!!!")
 
         let createdNote = await dispatch(createNewNote(payload));
         if (createdNote) {
@@ -95,7 +95,7 @@ const CreateNewNote = () => {
                value={content}
                onChange={updateContent}
            />
-              <select onChange={setNotebook} >
+              <select onChange={updateNotebook} >
                  <option value="none" selected disabled hidden>Select Notebook</option>
                   {userNotebooks.map((notebook) => {
                       return <option value={notebook.id}>{notebook.title}</option>

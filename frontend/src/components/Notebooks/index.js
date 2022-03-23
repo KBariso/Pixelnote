@@ -4,7 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllNotebooks } from "../../store/notebooks";
 import Notebook from "../Notebook";
 import "./notebooks.css";
-import OneNotebookDetails from "../../OneNotebookDetails";
+import NewNotebookModal from "../NewNotebookModal";
+// import OneNotebookDetails from "../OneNotebookDetails";
 // import { getOneNotebook } from "../store/notebooks";
 
 const Notebooks = () => {
@@ -36,8 +37,7 @@ const Notebooks = () => {
     <>
       {/* <h2 className="WOP">This page is currently under construction</h2> */}
       <div className="allNotebooks">
-        <div className="test8">
-          <div className="notebookList">
+          {/* <div className="notebookList"> */}
             {userNotebooks.map((notebook) => {
               return (
                 <Notebook
@@ -51,10 +51,10 @@ const Notebooks = () => {
                 );
               })}
 
-              <OneNotebookDetails />
-          </div>
-        </div>
+              {/* <OneNotebookDetails /> */}
+          {/* </div> */}
       </div>
+      <NewNotebookModal />
     </>
   );
 };

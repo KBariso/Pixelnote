@@ -50,6 +50,7 @@ export const createNewNote = (note) => async (dispatch) => {
   });
   if (res.ok) {
     const note = await res.json();
+    console.log(note, "I AM THE THUNK NOTE")
     dispatch(createOneNote(note));
     return note;
   }

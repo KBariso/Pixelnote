@@ -5,7 +5,7 @@ import { getAllNotes, getOneNote } from "../../store/notes";
 import { NavLink } from "react-router-dom";
 import { Redirect } from "react-router-dom";
 import { useHistory } from "react-router-dom";
-
+import EditOneNote from "../EditNote";
 import './OneNote.css'
 
 
@@ -38,10 +38,11 @@ const Note = () =>  {
 
       return (
         <div className="content-container">
-      <p className="content">{oneNote?.content}</p>
+          <EditOneNote />
+      {/* <p className="content">{oneNote?.content}</p> */}
         <div>
         </div>
-        <NavLink className="editButton" to={`/notes/${noteId}/edit`}>Edit</NavLink>
+        {/* <NavLink className="editButton" to={`/notes/${noteId}/edit`}>Edit</NavLink> */}
         </div>
       );
 

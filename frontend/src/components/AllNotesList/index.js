@@ -4,6 +4,7 @@ import { NavLink, Redirect } from "react-router-dom";
 import { getAllNotes } from "../../store/notes";
 import NoteListDetail from "../AllNotesDetails";
 // import Note from "../OneNote";
+import Note from "../OneNote";
 import "./AllNotes.css";
 
 const NotesList = () => {
@@ -41,6 +42,9 @@ const NotesList = () => {
       </div>
       <div className="newNoteContainer">
         <NavLink className="newNote" to="/notes/new">New Note</NavLink>
+      </div>
+      <div>
+      {/* <NoteListDetail /> */}
       </div>
     </div>
   );

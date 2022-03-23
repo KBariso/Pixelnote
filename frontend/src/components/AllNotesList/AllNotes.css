@@ -1,11 +1,20 @@
+/* @media screen and (min-width: 5000px) {
+    .listContainer {
+      margin-top: 8em;
+    }
+  } */
+
+
+
 .listContainer {
     display: flex;
     text-decoration: turquoise;
     width: fit-content;
-    justify-content: flex-start;
-    margin-top: 4%;
+    /* justify-content: flex-start; */
+    margin-top: 5%;
     border: white solid;
     margin-left: 15%;
+    /* margin-right: 0px; */
 }
 
 .notesHeader {
