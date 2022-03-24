@@ -27,5 +27,27 @@ router.post(
   );
 
 
+  router.put(
+    "/:id(\\d+)/edit",
+    requireAuth,
+    asyncHandler(async function (req, res) {
+      const id = parseInt(req.params.id)
+      const { notebookId, title, updatedAt } = req.body;
+
+      const notebook = await Notebook.findByPk(id);
+      const updateNotebook = await notebook.update({ notebookId, title, updatedAt });
+      return res.json(updateNotebook);
+    })
+  )
+
+
+  router.delete("/:id(\\d+)", requireAuth, asyncHandler(async function (req, res) {
+    const id = parseInt(req.params.id)
+    const notebook = await Notebook.findByPk(id);
+    const {notebookId} = req.body;
+    await notebook.destroy();
+    return res.json(notebookId);
+  }));
+
 
 module.exports = router;

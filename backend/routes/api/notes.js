@@ -46,7 +46,6 @@ router.put(
     const note = await Note.findByPk(id);
     const updateNote = await note.update({ noteId, title, content, updatedAt });
     return res.json(updateNote);
-
   })
 )
 

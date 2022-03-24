@@ -13,6 +13,7 @@ import Note from "./components/OneNote";
 import CreateNewNote from "./components/CreateNewNote";
 import EditOneNote from "./components/EditNote";
 import CreateNotebook from "./components/CreateNotebook";
+import EditOneNotebook from "./components/EditNotebook";
 
 function App() {
   const dispatch = useDispatch();
@@ -46,6 +47,12 @@ function App() {
             <Route path="/notes/:id">
               <Note />
             </Route>
+          </Route>
+          <Route path="/notebooks/new">
+            <CreateNotebook />
+          </Route>
+          <Route path="/notebooks/:id/edit">
+            <EditOneNotebook />
           </Route>
           <Route path="/notebooks">
             <Notebooks />

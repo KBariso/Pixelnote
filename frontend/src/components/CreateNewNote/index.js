@@ -27,7 +27,7 @@ const CreateNewNote = () => {
       (notebook) => notebook.userId === user
     );
     const userNotebooks = Object.values(userNotebooksArr)
-    console.log(userNotebooks[0].id)
+    // console.log(userNotebooks[0].id)
 
 
 

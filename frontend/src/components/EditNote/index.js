@@ -11,12 +11,12 @@ const EditOneNote = () => {
     const dispatch = useDispatch();
     const history = useHistory()
     const { id } = useParams()
-    console.log(id)
+    // console.log(id)
 
     useEffect(() => {
         dispatch(getAllNotes(id));
-        console.log(id)
-        console.log("IM HERE")
+        // console.log(id)
+        // console.log("IM HERE")
     }, [dispatch, id]);
 
     const oneNote = useSelector((state) => state.notes[id]);
@@ -86,7 +86,7 @@ const EditOneNote = () => {
 
     return(
         <>
-     <div className="formContainerEdit">
+        <div className="formContainerEdit">
         <form className="form" onSubmit={handleSubmit}>
            {errors.length > 0 && (
                <ul className="errors">
