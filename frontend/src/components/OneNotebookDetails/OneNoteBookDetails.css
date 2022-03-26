@@ -1,6 +1,10 @@
 .NoteBookNotes {
+    display: flex;
     color: white;
     background-color: blueviolet;
+    /* padding: 10px; */
+    width: fit-content;
+    /* text-decoration: none; */
 }
 
 
@@ -11,6 +15,8 @@
     align-content: center;
     top: 25%;
     right:10%;
+    margin-left: 0px;
+    text-decoration: none;
 }
 
 h1.NotebookTitle {
@@ -24,6 +30,6 @@ h1.NotebookTitle {
 @media screen and (min-width: 900px) {
     .NotebookNotesContainer {
       padding: 2rem;
-      right: 0px;
+      /* right: 10px; */
     }
   }

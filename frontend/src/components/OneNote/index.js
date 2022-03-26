@@ -37,13 +37,16 @@ const Note = () =>  {
 
 
       return (
-        <div className="content-container">
+        <>
+
+        {/* <div className="content-container"> */}
           <EditOneNote />
       {/* <p className="content">{oneNote?.content}</p> */}
-        <div>
-        </div>
+        {/* <div>
+        </div> */}
         {/* <NavLink className="editButton" to={`/notes/${noteId}/edit`}>Edit</NavLink> */}
-        </div>
+        {/* </div> */}
+        </>
       );
 
 }

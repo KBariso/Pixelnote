@@ -37,6 +37,9 @@ const Notebooks = () => {
     <>
       {/* <h2 className="WOP">This page is currently under construction</h2> */}
       <div className="allNotebooks">
+
+        <NewNotebookModal />
+
           {/* <div className="notebookList"> */}
             {userNotebooks.map((notebook) => {
               return (
@@ -54,7 +57,6 @@ const Notebooks = () => {
               {/* <OneNotebookDetails /> */}
           {/* </div> */}
       </div>
-      <NewNotebookModal />
     </>
   );
 };

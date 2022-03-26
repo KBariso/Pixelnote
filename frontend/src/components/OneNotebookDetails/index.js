@@ -44,14 +44,15 @@ const OneNotebookDetails = () => {
           return (
             <>
               {/* <h1>huuu</h1> */}
-              <ul>
+              {/* <ul> */}
                 <NavLink
                   className="NotebookNotesLinkContainer"
+                  style={{ textDecoration: 'none' }}
                   to={`/notes/${note.id}`}
                 >
-                  <li className="NoteBookNotes">{note.title}</li>
+                  <p className="NoteBookNotes"> {'>'} {note.title}</p>
                 </NavLink>
-              </ul>
+              {/* </ul> */}
             </>
           );
         })}

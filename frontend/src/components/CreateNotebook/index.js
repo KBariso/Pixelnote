@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Redirect, useHistory } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { createNewNotebook } from "../../store/notebooks";
+import './CreateNotebook.css'
 
 const CreateNotebook = () => {
     const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const CreateNotebook = () => {
     const [errors, setErrors] = useState([]);
     // const [showModal, setShowModal] = useState(true);
 
-    
+
 
 
     const updateTitle = (e) => setTitle(e.target.value);
@@ -43,13 +44,13 @@ const CreateNotebook = () => {
         let createdNotebook = await dispatch(createNewNotebook(payload));
         if (createdNotebook) {
 
-        //   history.push(`/notebooks`);
+          history.push(`/notebooks`);
         }
       };
 
 
  return (
-     <div className="formContainer">
+     <div className="formContainer" style={{padding:'2%'}}>
         <form className="form" onSubmit={handleSubmit}>
            {errors.length > 0 && (
                <ul className="errors">
@@ -58,14 +59,14 @@ const CreateNotebook = () => {
                  ))}
                </ul>
              )}
-            <input className="titleInput"
+            <input className="titleInputEdit"
                placeholder="Title"
                type="text"
                value={title}
                onChange={updateTitle}/>
 
            <button type="submit">Click to Continue</button>
-           <button>Cancel</button>
+           {/* <button>Cancel</button> */}
         </form>
 
      </div>

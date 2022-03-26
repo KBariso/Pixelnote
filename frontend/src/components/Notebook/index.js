@@ -21,14 +21,28 @@ const Notebook = ({id, userId, title, createdAt, updatedAt }) => {
     <>
       <div className="notebookContainer">
       <NavLink className="note" to={`/notebooks/${id}`}>
+
         <p className="notebookListName" onClick={()=>setSelectedNotebook(id)}>{title}
         {/* <span className="errorMessage"> -UNAVAILABLE-</span> */}
+
+        <button className='editNotebookBttn'>
+          <NavLink className='editNotebookBttn' style={{ color: 'greenyellow' }} to={`/notebooks/${id}/edit`}>
+          <i class="fas fa-pen-to-square"/>
+
+          </NavLink>
+
+        </button>
+
         </p>
+
       <OneNotebookDetails />
         </NavLink>
         {/* <h5 className="headerNotebook">Is currently work in progress</h5> */}
         {/* <h1>{title}</h1> */}
+      <button>
+      </button>
       </div>
+
     </>
   );
 };

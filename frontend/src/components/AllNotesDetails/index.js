@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Redirect, useParams } from "react-router-dom";
 import Note from "../OneNote";
 import "./AllNotes.css"
+import EditOneNote from "../EditNote";
 
 const NoteListDetail = ({ id, userId, notebookId, title, content, createdAt, updatedAt}) => {
   const [selectedNote, setSelectedNote] = useState()
@@ -17,7 +18,7 @@ const NoteListDetail = ({ id, userId, notebookId, title, content, createdAt, upd
   return (
     <>
     {/* <h1>Notes</h1> */}
-    <div className="notesContainer">
+
       <NavLink className="note" to={`/notes/${id}`}>
         <h3 className="notesList" onClick={()=>setSelectedNote(id)}>{title}</h3>
       </NavLink>
@@ -27,7 +28,7 @@ const NoteListDetail = ({ id, userId, notebookId, title, content, createdAt, upd
       } */}
       {/* <Note /> */}
       {/* <h1>{oneNote?.content}</h1> */}
-    </div>
+
 
     </>
 

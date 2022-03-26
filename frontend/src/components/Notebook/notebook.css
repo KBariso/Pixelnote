@@ -27,3 +27,14 @@ p.notebookListName {
     margin-left: 15%;
     /* margin-top: 5%; */
 }
+
+
+.editNotebookBttn {
+    display: flex;
+    /* justify-content: flex-end; */
+    margin-left: 20px;
+}
+
+.editNotebookBttn:hover {
+    font-size: large;
+}
