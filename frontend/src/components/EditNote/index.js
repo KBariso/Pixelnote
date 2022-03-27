@@ -5,6 +5,7 @@ import { getAllNotes, getOneNote } from "../../store/notes";
 import { NavLink } from "react-router-dom";
 import { editNote } from "../../store/notes";
 import { deleteNote } from "../../store/notes";
+import { Modal } from "../../context/Modal";
 import "./editNote.css";
 
 const EditOneNote = () => {
@@ -29,6 +30,7 @@ const EditOneNote = () => {
   const [title, setTitle] = useState(oneNote?.title);
   const [content, setContent] = useState(oneNote?.content);
   const [errors, setErrors] = useState([]);
+  const [showModal, setShowModal] = useState(false);
 
   //   useEffect(() => {
   //     const errors = [];
@@ -106,7 +108,12 @@ const EditOneNote = () => {
             value={content}
             onChange={updateContent}
           />
-          <button type="submit">Save Changes</button>
+          <button type="submit" onClick={() => setShowModal(true)}>Save Changes</button>
+          {showModal && (
+        <Modal onClose={() => setShowModal(false)}>
+          <h1>Changes Saved!</h1>
+        </Modal>
+      )}
           <NavLink className="cancelEditBtn" to="/notes">
             Cancel
           </NavLink>
