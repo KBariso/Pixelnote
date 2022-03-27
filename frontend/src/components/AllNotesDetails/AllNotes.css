@@ -1,9 +1,9 @@
 .notesContainer {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     /* align-content: center; */
     padding-left: 10%;
-    width: 100%;
+    /* width: 100%; */
 }
 
 
@@ -18,19 +18,10 @@
 
 }
 
-.note {
 
+.note {
     text-decoration: white;
 }
 
 
-.newNoteContainer {
-    margin-top: 20px;
-    margin-right: 10px;
-}
 
-.newNote {
-    color: white;
-    margin-top: 5%;
-
-}

@@ -4,6 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllNotebooks } from "../../store/notebooks";
 import Notebook from "../Notebook";
 import "./notebooks.css";
+import NewNotebookModal from "../NewNotebookModal";
+// import OneNotebookDetails from "../OneNotebookDetails";
+// import { getOneNotebook } from "../store/notebooks";
 
 const Notebooks = () => {
   const dispatch = useDispatch();
@@ -23,29 +26,38 @@ const Notebooks = () => {
     (notebook) => notebook.userId === user
   );
 
+  // useEffect(() => {
+  //   dispatch(getOneNotebook());
+  // }, [dispatch]);
+
+
   //any data manip, from our state. If an array - map and render, so you can have a subcomponent
 
   return (
-    <div className="allNotebooks">
+    <>
+      {/* <h2 className="WOP">This page is currently under construction</h2> */}
+      <div className="allNotebooks">
 
-        <div className="notebookList">
-        <div >
-      <h2 className="WOP">This page is currently under construction</h2>
-    </div>
-          {userNotebooks.map(({ id, userId, title, createdAt, updatedAt }) => {
-            return (
-              <Notebook
-                key={id}
-                userId={userId}
-                title={title}
-                createdAt={createdAt}
-                updatedAt={updatedAt}
-              />
-            );
-          })}
-        </div>
-    </div>
+        <NewNotebookModal />
 
+          {/* <div className="notebookList"> */}
+            {userNotebooks.map((notebook) => {
+              return (
+                <Notebook
+                id={notebook.id}
+                userId={notebook.userId}
+                title={notebook.title}
+                createdAt={notebook.createdAt}
+                updatedAt={notebook.updatedAt}
+                />
+
+                );
+              })}
+
+              {/* <OneNotebookDetails /> */}
+          {/* </div> */}
+      </div>
+    </>
   );
 };
 

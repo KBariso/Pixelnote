@@ -38,6 +38,7 @@ function ProfileButton({ user }) {
     <>
       <button onClick={openMenu}>Profile
         <i className="fas fa-id-badge" />
+
       </button>
       {showMenu && (
         <ul className="profile-dropdown">

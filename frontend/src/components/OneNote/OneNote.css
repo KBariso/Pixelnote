@@ -1,15 +1,17 @@
-.content-container {
+/* .content-container {
     display:flex;
     position: absolute;
 
     top:15%;
-    margin-left: 60%;
+    margin-left: 55%;
     flex-direction: row;
-    /* margin-bottom: 55%; */
-}
+    margin-bottom: 55%;
+    position: absolute;
+    float: right;
+} */
 
 .content {
-    width:70%;
+    /* width:70%; */
     /* height: 60%; */
 }
 

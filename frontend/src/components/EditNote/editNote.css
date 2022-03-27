@@ -1,5 +1,5 @@
 .titleInputEdit {
-    width: 25%;
+    width: 40%;
     height:15%;
     margin-top: 15px;
     /* margin-bottom: 20px; */
@@ -24,4 +24,36 @@
 .deleteBtnEdit:hover {
     color: red;
     text-decoration-color: black;
+}
+
+/* .form {
+    width: 100px;
+    height: 50px;
+    border: solid 1px #345;
+    white-space: nowrap;
+    overflow:hidden;
+} */
+
+.formContainerEdit {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    position: absolute;
+    right: 1%;
+    top: 10%;
+    /* float: right; */
+
+}
+
+
+
+
+.Editform {
+    background-color: none;
+    margin-top: 8%;
+    margin-left: 15%;
+/* justify-content: center; */
+    width: 75%;
+    height: 450px;
+    border-radius: 20px;
+    border: whitesmoke solid;
 }

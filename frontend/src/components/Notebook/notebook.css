@@ -1,12 +1,4 @@
-.notebookContainer {
-   margin-left: 30%;
-}
 
-.notebookList {
-    /* background-color: brown; */
-    margin-top: 4%;
-    text-decoration-line: line-through;
-}
 
 /* .allNoteBooks {
     margin-top: 20%;
@@ -17,6 +9,32 @@
     /* margin-left: 10%; */
 }
 
-.errorMessage {
-    text-decoration: none;
+.notebookContainer {
+     display: flex;
+     flex-direction: column;
+     /* position:absolute; */
+        /* margin-top: 15%; */
+}
+
+p.notebookListName {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    /* position: relative; */
+
+    margin-right: 0%;
+    /* left: 10%; */
+    margin-left: 15%;
+    /* margin-top: 5%; */
+}
+
+
+.editNotebookBttn {
+    display: flex;
+    /* justify-content: flex-end; */
+    margin-left: 20px;
+}
+
+.editNotebookBttn:hover {
+    font-size: large;
 }

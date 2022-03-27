@@ -29,8 +29,8 @@ router.post(
   "/",
   requireAuth,
   asyncHandler(async function (req, res) {
-    const { userId, title, content, createdAt, updatedAt } = req.body;
-    const newNote = await Note.create({ userId, title, content, createdAt, createdAt, updatedAt });
+    const { userId, title, notebookId, content, createdAt, updatedAt } = req.body;
+    const newNote = await Note.create({ userId, title, notebookId, content, createdAt, createdAt, updatedAt });
     return res.json(newNote);
   })
 );
@@ -46,7 +46,6 @@ router.put(
     const note = await Note.findByPk(id);
     const updateNote = await note.update({ noteId, title, content, updatedAt });
     return res.json(updateNote);
-
   })
 )
 

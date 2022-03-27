@@ -7,10 +7,13 @@ import Navigation from "./components/Navigation";
 import Splash from "./components/Splash";
 import Home from "./components/Home";
 import Notebooks from "./components/Notebooks";
+import OneNotebookDetails from "./components/OneNotebookDetails";
 import NotesList from "./components/AllNotesList";
 import Note from "./components/OneNote";
 import CreateNewNote from "./components/CreateNewNote";
 import EditOneNote from "./components/EditNote";
+import CreateNotebook from "./components/CreateNotebook";
+import EditOneNotebook from "./components/EditNotebook";
 
 function App() {
   const dispatch = useDispatch();
@@ -45,8 +48,17 @@ function App() {
               <Note />
             </Route>
           </Route>
+          <Route path="/notebooks/new">
+            <CreateNotebook />
+          </Route>
+          <Route path="/notebooks/:id/edit">
+            <EditOneNotebook />
+          </Route>
           <Route path="/notebooks">
             <Notebooks />
+              <Route path="/notebooks/:id" exact>
+                <OneNotebookDetails />
+              </Route>
           </Route>
         </Switch>
       )}

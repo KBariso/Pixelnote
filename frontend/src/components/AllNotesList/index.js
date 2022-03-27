@@ -3,8 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink, Redirect } from "react-router-dom";
 import { getAllNotes } from "../../store/notes";
 import NoteListDetail from "../AllNotesDetails";
+import EditOneNote from "../EditNote";
 // import Note from "../OneNote";
-import "./AllNotes.css";
+import Note from "../OneNote";
+import "./AllNotesList.css";
 
 const NotesList = () => {
   const dispatch = useDispatch();
@@ -22,26 +24,29 @@ const NotesList = () => {
 
   return (
     <div className="listContainer">
-      <div className="notesList">
+      <div className="notesListContainer">
       <h1 className="notesHeader">All Notes</h1>
-        {userNotes.map((note) => {
-          // console.log(note.id);
-          return (
-            <NoteListDetail
-              id={note.id}
-              userId={note.userId}
-              notebookId={note.notebookId}
-              title={note.title}
-              content={note.content}
-              createdAt={note.createdAt}
-              updatedAt={note.updatedAt}
-            />
-          );
-        })}
+      {userNotes.map((note) => {
+        // console.log(note.id);
+        return (
+          <NoteListDetail
+            id={note.id}
+            userId={note.userId}
+            notebookId={note.notebookId}
+            title={note.title}
+            content={note.content}
+            createdAt={note.createdAt}
+            updatedAt={note.updatedAt}
+          />
+        );
+      })}
       </div>
       <div className="newNoteContainer">
-        <NavLink className="newNote" to="/notes/new">New Note</NavLink>
+        <NavLink className="newNote" to="/notes/new">
+          New Note
+        </NavLink>
       </div>
+        {/* <EditOneNote notesProp={notes}/> */}
     </div>
   );
 };
