@@ -12,7 +12,7 @@ const EditOneNote = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
 
   useEffect(() => {
     dispatch(getAllNotes(id));
@@ -21,7 +21,7 @@ const EditOneNote = () => {
   }, [dispatch, id]);
 
   const oneNote = useSelector((state) => state.notes[id]);
-  console.log(oneNote);
+  // console.log(oneNote);
 
   const userId = useSelector((state) => state.session.user?.id);
   // console.log(user.noteId)
@@ -47,7 +47,7 @@ const EditOneNote = () => {
     if (oneNote) {
       setTitle(oneNote?.title);
       setContent(oneNote?.content);
-      console.log("NOW HERE");
+      // console.log("NOW HERE");
     }
   }, [oneNote]);
 

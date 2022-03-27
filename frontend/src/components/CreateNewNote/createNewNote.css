@@ -13,6 +13,7 @@
     width: 70%;
     border-radius: 20px;
     border: whitesmoke solid;
+
 }
 
 .contentInput {
@@ -25,6 +26,7 @@
 .titleInput {
     width: 25%;
     height:15%;
+    font-family: 'Press Start 2P', cursive;
     /* margin-bottom: 10px; */
 }
 

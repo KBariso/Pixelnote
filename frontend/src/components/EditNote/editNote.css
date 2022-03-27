@@ -2,6 +2,7 @@
     width: 40%;
     height:15%;
     margin-top: 15px;
+    font-family: 'Press Start 2P', cursive;
     /* margin-bottom: 20px; */
 }
 .cancelEditBtn {
@@ -42,6 +43,14 @@
     top: 10%;
     /* float: right; */
 
+}
+
+.contentInput {
+    font-family: 'Press Start 2P', cursive;
+    font-size:medium;
+    line-height: 175%;
+    /* font-weight:bold; */
+    /* white-space:unset; */
 }
 
 

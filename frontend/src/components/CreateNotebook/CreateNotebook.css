@@ -1,0 +1,21 @@
+.titleInputNotebook {
+    display: flex;
+    width: 70%;
+    height:15%;
+    margin-top: 15px;
+    font-family: 'Press Start 2P', cursive;
+}
+.formNotebook {
+    background-color: none;
+    /* margin-top: 8%;
+    margin-left: 15%; */
+/* justify-content: center; */
+    width: 98%;
+    /* margin-right: 2%; */
+    /* border-radius: 20px; */
+    border: whitesmoke solid;
+}
+
+/* .formContainerNotebook {
+    margin: 0px;
+} */

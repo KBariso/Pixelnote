@@ -50,8 +50,8 @@ const CreateNotebook = () => {
 
 
  return (
-     <div className="formContainer" style={{padding:'2%'}}>
-        <form className="form" onSubmit={handleSubmit}>
+     <div className="formContainerNotebook" style={{padding:'2%'}}>
+        <form className="formNotebook" onSubmit={handleSubmit}>
            {errors.length > 0 && (
                <ul className="errors">
                  {errors.map((error) => (
@@ -59,7 +59,7 @@ const CreateNotebook = () => {
                  ))}
                </ul>
              )}
-            <input className="titleInputEdit"
+            <input className="titleInputNotebook"
                placeholder="Title"
                type="text"
                value={title}

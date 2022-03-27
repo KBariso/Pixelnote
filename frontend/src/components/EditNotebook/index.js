@@ -4,6 +4,7 @@ import { Redirect, useHistory, useParams, NavLink } from "react-router-dom";
 import { editNotebook } from "../../store/notebooks";
 import { deleteNotebook } from "../../store/notebooks";
 import { getAllNotebooks } from "../../store/notebooks";
+import './EditNotebook.css'
 
 
 const EditOneNotebook = () => {
@@ -84,14 +85,14 @@ const EditOneNotebook = () => {
                  ))}
                </ul>
              )}
-            <input
+            <input className="EditNotebookTitle"
                placeholder="Title"
                type="text"
                value={title}
                onChange={updateTitle}/>
 
 
-           <button type="submit">Save Changes</button>
+           <button type="submit">Click to Create Notebook</button>
            <NavLink className="cancelEditBtn" to="/notebooks">Cancel</NavLink>
            <button className="deleteBtnEdit" onClick={handleDelete}>
                Delete

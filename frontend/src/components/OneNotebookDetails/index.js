@@ -12,7 +12,7 @@ const OneNotebookDetails = () => {
   // console.log(notebooksProp[id])
 
   const notebooksObj = useSelector((state) => state.notebooks);
-  console.log(notebooksObj);
+  // console.log(notebooksObj);
   const notebooks = Object.values(notebooksObj);
   // console.log(notebooksObj[id])
   // const notebook = notebooks[id]
