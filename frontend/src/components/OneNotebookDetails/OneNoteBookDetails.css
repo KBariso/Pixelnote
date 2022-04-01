@@ -1,9 +1,10 @@
 .NoteBookNotes {
+    /* margin-top: 50px; */
     display: flex;
     color: white;
     background-color: blueviolet;
     /* padding: 10px; */
-    width: fit-content;
+    width: auto;
     /* text-decoration: none; */
 }
 
@@ -11,25 +12,37 @@
 .NotebookNotesContainer {
     display: flex;
     flex-direction: column;
-    position:absolute;
-    align-content: center;
-    top: 25%;
+    max-width: 30%;
+    align-items: center;
+    /* justify-self: center; */
+    /* top: 25%;
     right:10%;
-    margin-left: 0px;
+    margin-left: 0px; */
     text-decoration: none;
 }
 
 h1.NotebookTitle {
     display: flex;
-    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 3em;
+    /* width: 90%; */
+    /* align-self: center; */
+    /* height: 10%; */
     color:whitesmoke;
     justify-content: center;
+    flex-wrap: wrap;
+    /* justify-self: auto; */
 }
 
 
-@media screen and (min-width: 900px) {
+/* @media screen and (min-width: 900px) {
     .NotebookNotesContainer {
       padding: 2rem;
-      /* right: 10px; */
     }
-  }
+  } */
+
+  /* @media screen and (min-width: 900px) {
+    .NotebookNotesContainer {
+      padding: 5rem 1rem;
+    }
+  } */

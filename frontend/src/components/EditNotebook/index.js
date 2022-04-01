@@ -70,6 +70,7 @@ const EditOneNotebook = () => {
         const deletedNotebook = await dispatch(deleteNotebook(deleteOneNotebook));
         if (!deletedNotebook) {
           history.push(`/notebooks`);
+          window.location.reload();
 
         }
       };
@@ -92,7 +93,7 @@ const EditOneNotebook = () => {
                onChange={updateTitle}/>
 
 
-           <button type="submit">Click to Create Notebook</button>
+           <button type="submit">Click to Edit Notebook Title</button>
            <NavLink className="cancelEditBtn" to="/notebooks">Cancel</NavLink>
            <button className="deleteBtnEdit" onClick={handleDelete}>
                Delete

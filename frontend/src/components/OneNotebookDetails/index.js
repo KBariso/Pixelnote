@@ -36,7 +36,7 @@ const OneNotebookDetails = () => {
 
   return (
     <>
-      <div className="NotebookNotesContainer">
+      <div className="NotebookNotesContainer scroll">
         {notebookName.map((notebook) => {
           return <h1 className="NotebookTitle">{notebook.title}</h1>;
         })}

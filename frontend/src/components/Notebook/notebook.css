@@ -19,10 +19,10 @@
 p.notebookListName {
     display: flex;
     justify-content: center;
-    width: 30%;
+    width: 75%;
     /* position: relative; */
 
-    margin-right: 0%;
+    /* margin-right: 0%; */
     /* left: 10%; */
     margin-left: 15%;
     /* margin-top: 5%; */

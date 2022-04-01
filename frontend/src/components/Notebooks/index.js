@@ -40,7 +40,7 @@ const Notebooks = () => {
 
         <NewNotebookModal />
 
-          {/* <div className="notebookList"> */}
+          <div className="notebookList">
             {userNotebooks.map((notebook) => {
               return (
                 <Notebook
@@ -55,7 +55,7 @@ const Notebooks = () => {
               })}
 
               {/* <OneNotebookDetails /> */}
-          {/* </div> */}
+          </div>
       </div>
     </>
   );

@@ -14,6 +14,7 @@ import CreateNewNote from "./components/CreateNewNote";
 import EditOneNote from "./components/EditNote";
 import CreateNotebook from "./components/CreateNotebook";
 import EditOneNotebook from "./components/EditNotebook";
+import './App.css'
 
 function App() {
   const dispatch = useDispatch();
@@ -54,12 +55,14 @@ function App() {
           <Route path="/notebooks/:id/edit">
             <EditOneNotebook />
           </Route>
+            <div className="NotebooksAndNotesContainer">
           <Route path="/notebooks">
             <Notebooks />
               <Route path="/notebooks/:id" exact>
                 <OneNotebookDetails />
               </Route>
           </Route>
+            </div>
         </Switch>
       )}
     </>
