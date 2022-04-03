@@ -5,6 +5,7 @@
     background-color: blueviolet;
     /* padding: 10px; */
     width: auto;
+    height: fit-content;
     /* text-decoration: none; */
 }
 
@@ -12,7 +13,7 @@
 .NotebookNotesContainer {
     display: flex;
     flex-direction: column;
-    max-width: 30%;
+    max-width: 35%;
     align-items: center;
     /* justify-self: center; */
     /* top: 25%;
@@ -25,12 +26,12 @@ h1.NotebookTitle {
     display: flex;
     margin-bottom: 50px;
     margin-top: 3em;
-    /* width: 90%; */
+    /* width: 100%; */
     /* align-self: center; */
     /* height: 10%; */
     color:whitesmoke;
-    justify-content: center;
-    flex-wrap: wrap;
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
     /* justify-self: auto; */
 }
 
