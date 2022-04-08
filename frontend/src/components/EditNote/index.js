@@ -6,6 +6,12 @@ import { NavLink } from "react-router-dom";
 import { editNote } from "../../store/notes";
 import { deleteNote } from "../../store/notes";
 import { Modal } from "../../context/Modal";
+import 'froala-editor/js/froala_editor.pkgd.min.js';
+import 'froala-editor/css/froala_style.min.css';
+import 'froala-editor/css/froala_editor.pkgd.min.css';
+// import 'font-awesome/css/font-awesome.css';
+import FroalaEditor from 'react-froala-wysiwyg';
+// import FroalaEditorView from "react-froala-wysiwyg/FroalaEditorView";
 import "./editNote.css";
 
 const EditOneNote = () => {
@@ -101,7 +107,7 @@ const EditOneNote = () => {
             value={title}
             onChange={updateTitle}
           />
-          <textarea
+          <FroalaEditor
             className="contentInput"
             placeholder="Type to Start"
             type="text"
